@@ -110,21 +110,87 @@ form[style*="background"]{padding:22px!important}
 </div>
 </header>
 
-<!-- VŠETKY PONUKY -->
-<section id="ponuka" style="padding: 64px 0 96px">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 40px">
-<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-end; justify-content: space-between">
+<!-- PONUKA VYHLADAVAC -->
+<section id="vyhladavac" style="padding: 64px 0 96px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 28px">
 <div style="display: flex; flex-direction: column; gap: 14px">
 <span style="font-size: 13px; font-weight: 800; letter-spacing: 0.28em; color: #8A6A2B">PONUKA NEHNUTEĽNOSTÍ</span>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.1; color: #001939">Naša aktuálna ponuka</h2>
+<h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(2.2rem, 4vw, 3.2rem); line-height: 1.1; color: #001939">Vyberte si z celej ponuky</h1>
 </div>
-<a href="https://www.nehnutelnosti.sk/realitna-kancelaria/lumera-real-estate-sro/centrala/inzeraty/9caeb98b-aa6d-427b-87d2-39b074880e59" style="font-weight: 800; font-size: 16px; padding: 12px 0">Všetkých 15 ponúk na nehnutelnosti.sk →</a>
+<button type="button" id="f-toggle" class="f-toggle" aria-expanded="false" aria-controls="vyhladavac-form" style="display: none; min-height: 52px; align-items: center; justify-content: center; gap: 10px; border: 1px solid #001939; border-radius: 4px; background: #FFFFFF; color: #001939; font-size: 16px; font-weight: 800; font-family: inherit; cursor: pointer"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#001939" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M7 12h10M10 18h4"></path></svg><span id="f-toggle-t">Zobraziť filter</span></button>
+<form id="vyhladavac-form" onsubmit="return false" style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; padding: 28px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; flex-wrap: wrap; gap: 18px 40px">
+<div role="group" aria-label="Typ obchodu" style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 14px; font-weight: 800; color: #001939">Mám záujem o</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" class="pill on" data-group="f-deals" data-value="kupa" aria-pressed="true">Kúpa</button>
+<button type="button" class="pill" data-group="f-deals" data-value="prenajom" aria-pressed="false">Prenájom</button>
+<button type="button" class="pill" data-group="f-deals" data-value="" aria-pressed="false">Všetko</button>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
-
-<article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-<a href="byt-28-oktobra.html" aria-label="3-izbový byt s 2 balkónmi v tehlovom dome" style="position: relative; height: 220px; background: #DCD6C8 url('img/byt-28-oktobra/01.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
-
+</div>
+<div role="group" aria-label="Typ nehnuteľnosti" style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 14px; font-weight: 800; color: #001939">Typ nehnuteľnosti</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" class="pill on" data-group="f-types" data-value="" aria-pressed="true">Všetky typy</button>
+<button type="button" class="pill" data-group="f-types" data-value="byt" aria-pressed="false">Byt</button>
+<button type="button" class="pill" data-group="f-types" data-value="dom" aria-pressed="false">Rodinný dom</button>
+<button type="button" class="pill" data-group="f-types" data-value="pozemok" aria-pressed="false">Pozemok</button>
+<button type="button" class="pill" data-group="f-types" data-value="komercne" aria-pressed="false">Komerčné / priemyselné</button>
+<button type="button" class="pill" data-group="f-types" data-value="nebyt" aria-pressed="false">Nebytový priestor</button>
+</div>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px">
+<div class="f-okres-w" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<label for="f-okres" style="font-size: 14px; font-weight: 800; color: #001939">Lokalita (okres)</label>
+<select id="f-okres" style="height: 48px; padding: 0 12px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; font-size: 16px; font-family: inherit; color: #1B2533; width: 100%; box-sizing: border-box; min-width: 0"><option value="">Všetky lokality</option><option value="Trenčín">Trenčín</option><option value="Bánovce nad Bebravou">Bánovce nad Bebravou</option><option value="Myjava">Myjava</option><option value="Malacky">Malacky</option><option value="Nitra">Nitra</option><option value="Trnava">Trnava</option></select>
+</div>
+<div class="f-cod-w" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<label for="f-cod" style="font-size: 14px; font-weight: 800; color: #001939">Cena od (€)</label>
+<input id="f-cod" type="number" inputmode="numeric" min="0" placeholder="0" style="height: 48px; padding: 0 12px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; font-size: 16px; font-family: inherit; color: #1B2533; width: 100%; box-sizing: border-box; min-width: 0">
+</div>
+<div class="f-cdo-w" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<label for="f-cdo" style="font-size: 14px; font-weight: 800; color: #001939">Cena do (€)</label>
+<input id="f-cdo" type="number" inputmode="numeric" min="0" placeholder="bez limitu" style="height: 48px; padding: 0 12px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; font-size: 16px; font-family: inherit; color: #1B2533; width: 100%; box-sizing: border-box; min-width: 0">
+</div>
+<div class="f-vod-w" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<label for="f-vod" style="font-size: 14px; font-weight: 800; color: #001939">Výmera od (m²)</label>
+<input id="f-vod" type="number" inputmode="numeric" min="0" placeholder="0" style="height: 48px; padding: 0 12px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; font-size: 16px; font-family: inherit; color: #1B2533; width: 100%; box-sizing: border-box; min-width: 0">
+</div>
+<div class="f-vdo-w" style="display: flex; flex-direction: column; gap: 8px; min-width: 0">
+<label for="f-vdo" style="font-size: 14px; font-weight: 800; color: #001939">Výmera do (m²)</label>
+<input id="f-vdo" type="number" inputmode="numeric" min="0" placeholder="bez limitu" style="height: 48px; padding: 0 12px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; font-size: 16px; font-family: inherit; color: #1B2533; width: 100%; box-sizing: border-box; min-width: 0">
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 14px 40px; align-items: flex-end">
+<div role="group" aria-label="Počet izieb" style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 14px; font-weight: 800; color: #001939">Počet izieb</span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<button type="button" class="pill on" data-group="f-rooms" data-value="" aria-pressed="true">Všetky</button>
+<button type="button" class="pill" data-group="f-rooms" data-value="1" aria-pressed="false">1</button>
+<button type="button" class="pill" data-group="f-rooms" data-value="2" aria-pressed="false">2</button>
+<button type="button" class="pill" data-group="f-rooms" data-value="3" aria-pressed="false">3</button>
+<button type="button" class="pill" data-group="f-rooms" data-value="4" aria-pressed="false">4</button>
+<button type="button" class="pill" data-group="f-rooms" data-value="5" aria-pressed="false">5+</button>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px 24px">
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; font-weight: 600; color: #001939; cursor: pointer; min-height: 44px"><input id="f-nov" type="checkbox" style="width: 22px; height: 22px; margin: 0; accent-color: #B8860B">Len novostavby</label>
+<label style="display: flex; gap: 10px; align-items: center; font-size: 15px; font-weight: 600; color: #001939; cursor: pointer; min-height: 44px"><input id="f-park" type="checkbox" style="width: 22px; height: 22px; margin: 0; accent-color: #B8860B">Garáž / vlastné parkovanie</label>
+</div>
+</div>
+</form>
+<div style="display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between">
+<p id="f-count" aria-live="polite" style="margin: 0; font-size: 17px; font-weight: 700; color: #001939">Nájdené ponuky</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center">
+<button type="button" id="f-reset" style="min-height: 44px; padding: 0 16px; border: none; background: none; color: #8A6A2B; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer; text-decoration: underline">Zrušiť filtre</button>
+<label for="f-sort" style="font-size: 14px; font-weight: 700; color: #4A5566">Zoradiť</label>
+<select id="f-sort" style="height: 44px; padding: 0 12px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; font-size: 15px; font-family: inherit; color: #1B2533"><option value="odp">Odporúčané</option><option value="lac">Najlacnejšie</option><option value="dra">Najdrahšie</option><option value="vym">Najväčšia výmera</option></select>
+</div>
+</div>
+<div id="f-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px">
+<article class="f-card" data-deal="kupa" data-type="byt" data-okres="Trenčín" data-price="139900" data-area="67" data-rooms="3" data-nov="0" data-park="0" data-kom="0" data-order="1" style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
+<a href="byt-28-oktobra.html" aria-label="3-izbový byt s 2 balkónmi v tehlovom dome" style="position: relative; height: 220px; background: #DCD6C8 url('img/byt-28-oktobra/01.jpg') center / cover no-repeat; display: block; text-decoration: none">
 <span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px"></span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Predaj</span>
 </a>
@@ -139,10 +205,8 @@ form[style*="background"]{padding:22px!important}
 <a href="byt-28-oktobra.html" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
 </div>
 </article>
-
-<article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-<a href="pozemok-zamarovce.html" aria-label="Slnečný pozemok v pokojnej slepej ulici" style="position: relative; height: 220px; background: #DCD6C8 url('img/pozemok-zamarovce/01.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
-
+<article class="f-card" data-deal="kupa" data-type="pozemok" data-okres="Trenčín" data-price="143400" data-area="770" data-rooms="0" data-nov="0" data-park="0" data-kom="0" data-order="2" style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
+<a href="pozemok-zamarovce.html" aria-label="Slnečný pozemok v pokojnej slepej ulici" style="position: relative; height: 220px; background: #DCD6C8 url('img/pozemok-zamarovce/01.jpg') center / cover no-repeat; display: block; text-decoration: none">
 <span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px">Vizualizácia možnej výstavby</span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Predaj</span>
 </a>
@@ -157,10 +221,8 @@ form[style*="background"]{padding:22px!important}
 <a href="pozemok-zamarovce.html" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
 </div>
 </article>
-
-<article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-<a href="dom-trebichava.html" aria-label="Vidiecky dom – príležitosť na vlastnú chalupu" style="position: relative; height: 220px; background: #DCD6C8 url('img/dom-trebichava/01.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
-
+<article class="f-card" data-deal="kupa" data-type="dom" data-okres="Bánovce nad Bebravou" data-price="17990" data-area="50" data-rooms="0" data-nov="0" data-park="0" data-kom="0" data-order="3" style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
+<a href="dom-trebichava.html" aria-label="Vidiecky dom – príležitosť na vlastnú chalupu" style="position: relative; height: 220px; background: #DCD6C8 url('img/dom-trebichava/01.jpg') center / cover no-repeat; display: block; text-decoration: none">
 <span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px"></span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Predaj</span>
 </a>
@@ -175,10 +237,8 @@ form[style*="background"]{padding:22px!important}
 <a href="dom-trebichava.html" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
 </div>
 </article>
-
-<article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-<a href="byt-myjava.html" aria-label="1-izbový byt v pokojnej štvrti" style="position: relative; height: 220px; background: #DCD6C8 url('img/byt-myjava/01.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
-
+<article class="f-card" data-deal="kupa" data-type="byt" data-okres="Myjava" data-price="69900" data-area="34" data-rooms="1" data-nov="0" data-park="0" data-kom="0" data-order="4" style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
+<a href="byt-myjava.html" aria-label="1-izbový byt v pokojnej štvrti" style="position: relative; height: 220px; background: #DCD6C8 url('img/byt-myjava/01.jpg') center / cover no-repeat; display: block; text-decoration: none">
 <span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px"></span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Predaj</span>
 </a>
@@ -193,10 +253,8 @@ form[style*="background"]{padding:22px!important}
 <a href="byt-myjava.html" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
 </div>
 </article>
-
-<article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-<a href="dom-trencianske-mitice.html" aria-label="Nízkoenergetický dom s dvojgarážou a fotovoltikou" style="position: relative; height: 220px; background: #DCD6C8 url('img/dom-mitice/01.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
-
+<article class="f-card" data-deal="kupa" data-type="dom" data-okres="Trenčín" data-price="" data-area="180" data-rooms="5" data-nov="0" data-park="1" data-kom="0" data-order="5" style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
+<a href="dom-trencianske-mitice.html" aria-label="Nízkoenergetický dom s dvojgarážou a fotovoltikou" style="position: relative; height: 220px; background: #DCD6C8 url('img/dom-mitice/01.jpg') center / cover no-repeat; display: block; text-decoration: none">
 <span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px"></span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Exkluzívne</span>
 </a>
@@ -211,10 +269,8 @@ form[style*="background"]{padding:22px!important}
 <a href="dom-trencianske-mitice.html" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
 </div>
 </article>
-
-<article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-<a href="pozemok-malacky.html" aria-label="Stavebný pozemok v priemyselnom parku" style="position: relative; height: 220px; background: #DCD6C8 url('img/pozemok-malacky/01.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
-
+<article class="f-card" data-deal="kupa" data-type="pozemok" data-okres="Malacky" data-price="920000" data-area="13000" data-rooms="0" data-nov="0" data-park="0" data-kom="1" data-order="6" style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
+<a href="pozemok-malacky.html" aria-label="Stavebný pozemok v priemyselnom parku" style="position: relative; height: 220px; background: #DCD6C8 url('img/pozemok-malacky/01.jpg') center / cover no-repeat; display: block; text-decoration: none">
 <span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px"></span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Znížená cena</span>
 </a>
@@ -229,10 +285,8 @@ form[style*="background"]{padding:22px!important}
 <a href="pozemok-malacky.html" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
 </div>
 </article>
-
-<article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-<a href="pozemok-svinna.html" aria-label="Pozemok pre viacero rodinných domov" style="position: relative; height: 220px; background: #DCD6C8 url('img/pozemok-svinna/02.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
-
+<article class="f-card" data-deal="kupa" data-type="pozemok" data-okres="Trenčín" data-price="" data-area="10833" data-rooms="0" data-nov="0" data-park="0" data-kom="0" data-order="7" style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
+<a href="pozemok-svinna.html" aria-label="Pozemok pre viacero rodinných domov" style="position: relative; height: 220px; background: #DCD6C8 url('img/pozemok-svinna/02.jpg') center / cover no-repeat; display: block; text-decoration: none">
 <span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px">Vizualizácia možnej výstavby</span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Predaj</span>
 </a>
@@ -247,10 +301,8 @@ form[style*="background"]{padding:22px!important}
 <a href="pozemok-svinna.html" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
 </div>
 </article>
-
-<article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-<a href="byt-trencianske-teplice.html" aria-label="Priestranný 3-izbový byt s dvoma balkónmi" style="position: relative; height: 220px; background: #DCD6C8 url('img/byt-teplice/01.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
-
+<article class="f-card" data-deal="kupa" data-type="byt" data-okres="Trenčín" data-price="" data-area="94" data-rooms="3" data-nov="0" data-park="0" data-kom="0" data-order="8" style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
+<a href="byt-trencianske-teplice.html" aria-label="Priestranný 3-izbový byt s dvoma balkónmi" style="position: relative; height: 220px; background: #DCD6C8 url('img/byt-teplice/01.jpg') center / cover no-repeat; display: block; text-decoration: none">
 <span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px"></span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Predaj</span>
 </a>
@@ -265,10 +317,8 @@ form[style*="background"]{padding:22px!important}
 <a href="byt-trencianske-teplice.html" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
 </div>
 </article>
-
-<article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-<a href="byt-vlckovce.html" aria-label="Priestranný 3-izbový byt s balkónom a loggiou" style="position: relative; height: 220px; background: #DCD6C8 url('img/byt-vlckovce/01.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
-
+<article class="f-card" data-deal="kupa" data-type="byt" data-okres="Trnava" data-price="199900" data-area="78" data-rooms="3" data-nov="0" data-park="0" data-kom="0" data-order="9" style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
+<a href="byt-vlckovce.html" aria-label="Priestranný 3-izbový byt s balkónom a loggiou" style="position: relative; height: 220px; background: #DCD6C8 url('img/byt-vlckovce/01.jpg') center / cover no-repeat; display: block; text-decoration: none">
 <span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px"></span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Predaj</span>
 </a>
@@ -283,10 +333,8 @@ form[style*="background"]{padding:22px!important}
 <a href="byt-vlckovce.html" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
 </div>
 </article>
-
-<article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-<a href="pozemok-nitrianske-hrnciarovce.html" aria-label="Priemyselný pozemok pri ceste I/65" style="position: relative; height: 220px; background: #DCD6C8 url('img/pozemok-nitra/01.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
-
+<article class="f-card" data-deal="kupa" data-type="pozemok" data-okres="Nitra" data-price="550000" data-area="15843" data-rooms="0" data-nov="0" data-park="0" data-kom="1" data-order="10" style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
+<a href="pozemok-nitrianske-hrnciarovce.html" aria-label="Priemyselný pozemok pri ceste I/65" style="position: relative; height: 220px; background: #DCD6C8 url('img/pozemok-nitra/01.jpg') center / cover no-repeat; display: block; text-decoration: none">
 <span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px">Vizualizácia možnej výstavby</span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Predaj</span>
 </a>
@@ -301,10 +349,8 @@ form[style*="background"]{padding:22px!important}
 <a href="pozemok-nitrianske-hrnciarovce.html" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
 </div>
 </article>
-
-<article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-<a href="dom-trencianska-turna.html" aria-label="Moderný 6-ročný rodinný dom s garážou" style="position: relative; height: 220px; background: #DCD6C8 url('img/dom-turna/01.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
-
+<article class="f-card" data-deal="kupa" data-type="dom" data-okres="Trenčín" data-price="459900" data-area="110" data-rooms="4" data-nov="1" data-park="1" data-kom="0" data-order="11" style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
+<a href="dom-trencianska-turna.html" aria-label="Moderný 6-ročný rodinný dom s garážou" style="position: relative; height: 220px; background: #DCD6C8 url('img/dom-turna/01.jpg') center / cover no-repeat; display: block; text-decoration: none">
 <span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px"></span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Predaj</span>
 </a>
@@ -319,10 +365,8 @@ form[style*="background"]{padding:22px!important}
 <a href="dom-trencianska-turna.html" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
 </div>
 </article>
-
-<article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-<a href="byt-odbojarov-prenajom.html" aria-label="Štýlový 2-izbový byt s loggiou a parkovaním" style="position: relative; height: 220px; background: #DCD6C8 url('img/byt-odbojarov/01.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
-
+<article class="f-card" data-deal="prenajom" data-type="byt" data-okres="Trenčín" data-price="650" data-area="45" data-rooms="2" data-nov="1" data-park="1" data-kom="0" data-order="12" style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
+<a href="byt-odbojarov-prenajom.html" aria-label="Štýlový 2-izbový byt s loggiou a parkovaním" style="position: relative; height: 220px; background: #DCD6C8 url('img/byt-odbojarov/01.jpg') center / cover no-repeat; display: block; text-decoration: none">
 <span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px"></span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Prenájom</span>
 </a>
@@ -337,58 +381,13 @@ form[style*="background"]{padding:22px!important}
 <a href="byt-odbojarov-prenajom.html" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
 </div>
 </article>
-
 </div>
+<div id="f-empty" hidden style="background: #FFFFFF; border: 1px dashed #CFC8B8; border-radius: 6px; padding: 40px 28px; text-align: center; display: flex; flex-direction: column; gap: 12px; align-items: center">
+<strong style="font-size: 20px; color: #001939">Takúto nehnuteľnosť momentálne v ponuke nemáme</strong>
+<span style="font-size: 16px; color: #4A5566; max-width: 520px">Napíšte nám, čo hľadáte. Nové ponuky často predáme skôr, než sa dostanú na web – ozveme sa vám ako prvým.</span>
+<a href="#kontakt" style="background: #D9AE52; color: #001939; text-decoration: none; padding: 14px 24px; border-radius: 4px; font-weight: 800">Chcem byť informovaný</a>
 </div>
-</section>
-
-<!-- VYHĽADÁVANIE -->
-<section id="hladat" style="padding: 96px 0">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 32px">
-<div style="display: flex; flex-direction: column; gap: 14px">
-<span style="font-size: 13px; font-weight: 800; letter-spacing: 0.28em; color: #8A6A2B">VYHĽADÁVANIE</span>
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.1; color: #001939">Vyberte si z celej ponuky</h2>
-</div>
-<form style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 24px">
-<div style="display: flex; flex-wrap: wrap; gap: 10px" role="group" aria-label="Typ obchodu">
-<button type="button" class="pill on" data-group="deal" aria-pressed="true">Kúpa</button>
-<button type="button" class="pill" data-group="deal" aria-pressed="false">Prenájom</button>
-
-</div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px" role="group" aria-label="Typ nehnuteľnosti">
-<button type="button" class="pill on" data-group="type" aria-pressed="true">Byt</button>
-<button type="button" class="pill" data-group="type" aria-pressed="false">Rodinný dom</button>
-<button type="button" class="pill" data-group="type" aria-pressed="false">Pozemok</button>
-<button type="button" class="pill" data-group="type" aria-pressed="false">Nebytový priestor</button>
-
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
-<div style="display: flex; flex-direction: column; gap: 8px">
-<label for="lokalita" style="font-size: 14px; font-weight: 700; color: #001939">Lokalita</label>
-<select id="lokalita" style="height: 48px; padding: 0 12px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; font-size: 16px; font-family: inherit; color: #1B2533">
-<option>Všetky lokality</option>
-<option>Trenčín a okolie</option>
-<option>Trenčianske Teplice</option>
-<option>Bánovce nad Bebravou</option>
-<option>Myjava</option>
-<option>Nitra</option>
-<option>Trnava</option>
-<option>Malacky</option>
-</select>
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px">
-<label for="cena-od" style="font-size: 14px; font-weight: 700; color: #001939">Cena od (€)</label>
-<input id="cena-od" type="number" placeholder="0" style="height: 48px; padding: 0 12px; border-radius: 4px; border: 1px solid #CFC8B8; font-size: 16px; font-family: inherit">
-</div>
-<div style="display: flex; flex-direction: column; gap: 8px">
-<label for="cena-do" style="font-size: 14px; font-weight: 700; color: #001939">Cena do (€)</label>
-<input id="cena-do" type="number" placeholder="bez limitu" style="height: 48px; padding: 0 12px; border-radius: 4px; border: 1px solid #CFC8B8; font-size: 16px; font-family: inherit">
-</div>
-<div style="display: flex; align-items: flex-end">
-<a href="https://www.nehnutelnosti.sk/realitna-kancelaria/lumera-real-estate-sro/centrala/inzeraty/9caeb98b-aa6d-427b-87d2-39b074880e59" style="width: 100%; height: 48px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border-radius: 4px; background: #001939; color: #F7F5F0; text-decoration: none; font-size: 16px; font-weight: 800">Zobraziť výsledky</a>
-</div>
-</div>
-</form>
+<button type="button" id="f-more" hidden style="align-self: center; min-height: 52px; padding: 0 32px; border: 1px solid #001939; border-radius: 4px; background: #FFFFFF; color: #001939; font-size: 16px; font-weight: 800; font-family: inherit; cursor: pointer">Načítať ďalšie ponuky</button>
 </div>
 </section>
 
@@ -466,6 +465,43 @@ form[style*="background"]{padding:22px!important}
 </a>
 
 </div>
+<style>@media (max-width: 640px){.f-toggle{display:flex!important}.f-okres-w{grid-column:1/-1}#vyhladavac-form:not(.f-open){display:none!important}}</style>
+<script>
+(function(){
+  var grid=document.getElementById('f-grid'); if(!grid)return;
+  var $=function(id){return document.getElementById(id)}, cards=[].slice.call(grid.querySelectorAll('.f-card')), PAGE=9, shown=PAGE;
+  var pick=function(g){var b=document.querySelector('.pill.on[data-group="f-'+g+'"]');return b?b.dataset.value:''};
+  var setPill=function(g,v){document.querySelectorAll('.pill[data-group="f-'+g+'"]').forEach(function(b){var on=b.dataset.value===v;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on?'true':'false')})};
+  var num=function(id){var v=$(id).value;return v===''?null:Number(v)};
+  function apply(keep){
+    if(!keep)shown=PAGE;
+    var deal=pick('deals'),type=pick('types'),rooms=pick('rooms'),ok=$('f-okres').value,cod=num('f-cod'),cdo=num('f-cdo'),vod=num('f-vod'),vdo=num('f-vdo'),nov=$('f-nov').checked,park=$('f-park').checked,s=$('f-sort').value;
+    var hits=cards.filter(function(c){var d=c.dataset,p=d.price===''?null:Number(d.price),a=Number(d.area),r=Number(d.rooms);
+      return (!deal||d.deal===deal)&&(!type||(type==='komercne'?d.kom==='1':d.type===type))&&(!ok||d.okres===ok)&&(!rooms||(rooms==='5'?r>=5:r===Number(rooms)))
+        &&(cod===null||(p!==null&&p>=cod))&&(cdo===null||(p!==null&&p<=cdo))&&(vod===null||a>=vod)&&(vdo===null||a<=vdo)&&(!nov||d.nov==='1')&&(!park||d.park==='1')});
+    var pr=function(c,hi){return c.dataset.price===''?(hi?-1:Infinity):Number(c.dataset.price)};
+    hits.sort(function(a,b){if(s==='lac')return pr(a,0)-pr(b,0);if(s==='dra')return pr(b,1)-pr(a,1);if(s==='vym')return b.dataset.area-a.dataset.area;return a.dataset.order-b.dataset.order});
+    cards.forEach(function(c){c.hidden=true});
+    hits.forEach(function(c,i){grid.appendChild(c);c.hidden=i>=shown});
+    var n=hits.length;
+    $('f-count').textContent=n===1?'Nájdená 1 nehnuteľnosť':(n>=2&&n<=4?'Nájdené '+n+' nehnuteľnosti':'Nájdených '+n+' nehnuteľností');
+    $('f-empty').hidden=n>0; $('f-more').hidden=n<=shown;
+  }
+  document.querySelectorAll('.pill[data-group^="f-"]').forEach(function(b){b.addEventListener('click',function(){setTimeout(function(){apply()},0)})});
+  ['f-okres','f-cod','f-cdo','f-vod','f-vdo','f-nov','f-park','f-sort'].forEach(function(id){$(id).addEventListener('input',function(){apply()});$(id).addEventListener('change',function(){apply()})});
+  $('f-more').addEventListener('click',function(){shown+=PAGE;apply(true)});
+  $('f-reset').addEventListener('click',function(){setPill('deals','kupa');setPill('types','');setPill('rooms','');['f-okres','f-cod','f-cdo','f-vod','f-vdo'].forEach(function(id){$(id).value=''});$('f-nov').checked=false;$('f-park').checked=false;$('f-sort').value='odp';apply()});
+  var tg=$('f-toggle'),fm=$('vyhladavac-form');
+  tg.addEventListener('click',function(){var o=fm.classList.toggle('f-open');tg.setAttribute('aria-expanded',o?'true':'false');$('f-toggle-t').textContent=o?'Skryť filter':'Zobraziť filter'});
+  var q=new URLSearchParams(location.search);
+  if(q.has('deal'))setPill('deals',q.get('deal'));
+  if(q.has('type'))setPill('types',q.get('type'));
+  if(q.get('okres'))$('f-okres').value=q.get('okres');
+  if(q.get('cod'))$('f-cod').value=q.get('cod');
+  if(q.get('cdo'))$('f-cdo').value=q.get('cdo');
+  apply();
+})();
+</script>
 <script>
 document.querySelectorAll('.pill').forEach(function(b){b.addEventListener('click',function(){
 document.querySelectorAll('.pill[data-group="'+b.dataset.group+'"]').forEach(function(o){o.classList.remove('on');o.setAttribute('aria-pressed','false')});
