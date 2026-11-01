@@ -15,6 +15,7 @@
 <style>
 html{scroll-behavior:smooth}
 body{margin:0;background:#F7F5F0}
+[hidden]{display:none!important}
 a{color:#8A6A2B}a:hover{color:#5E4719}
 .pill{min-height:44px;padding:0 20px;border-radius:4px;border:1px solid #CFC8B8;background:#FFFFFF;color:#001939;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer}
 .pill.on{border-color:#001939;background:#001939;color:#F7F5F0}
@@ -42,7 +43,7 @@ input[type=range].hrange{width:100%;height:28px;margin:0;accent-color:#B8860B;cu
 <nav aria-label="Hlavná navigácia" style="display: flex; flex-wrap: wrap; gap: 4px 24px; align-items: center; font-size: 15px; font-weight: 600">
 <a href="#o-nas" style="color: #F7F5F0; text-decoration: none; padding: 10px 0">O nás</a>
 <a href="#ponuka" style="color: #F7F5F0; text-decoration: none; padding: 10px 0">Ponuka nehnuteľností</a>
-<a href="#sluzby" style="color: #F7F5F0; text-decoration: none; padding: 10px 0">Chcem predať</a>
+<a href="#nacenenie" style="color: #F7F5F0; text-decoration: none; padding: 10px 0">Nacenenie</a>
 <a href="#vykup" style="color: #D9AE52; text-decoration: none; padding: 10px 0">Výkup nehnuteľností</a>
 <a href="#hypoteka" style="color: #F7F5F0; text-decoration: none; padding: 10px 0">Hypotéky</a>
 <a href="#sluzby" style="color: #F7F5F0; text-decoration: none; padding: 10px 0">Právne služby</a>
@@ -64,7 +65,7 @@ input[type=range].hrange{width:100%;height:28px;margin:0;accent-color:#B8860B;cu
 <h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(2.8rem, 6vw, 5rem); line-height: 1.02; max-width: 820px">Váš domov je pre nás záväzok.</h1>
 <p style="margin: 0; font-size: 19px; line-height: 1.6; color: #D3DAE4; max-width: 600px">Predáme, kúpime alebo rovno vykúpime vašu nehnuteľnosť. Zmluvy aj hypotéku vybavíme za vás.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px">
-<a href="#kontakt" style="background: #D9AE52; color: #001939; text-decoration: none; padding: 18px 30px; border-radius: 4px; font-weight: 800; font-size: 16px">Chcem predať / prenajať</a>
+<a href="#nacenenie" style="background: #D9AE52; color: #001939; text-decoration: none; padding: 18px 30px; border-radius: 4px; font-weight: 800; font-size: 16px">Chcem predať / prenajať</a>
 <a href="#ponuka" style="background: #F7F5F0; color: #001939; text-decoration: none; padding: 18px 30px; border-radius: 4px; font-weight: 800; font-size: 16px">Chcem kúpiť / prenajať si</a>
 <a href="#vykup" style="border: 1px solid #F7F5F0; color: #F7F5F0; text-decoration: none; padding: 17px 30px; border-radius: 4px; font-weight: 700; font-size: 16px">Rýchly výkup</a>
 </div>
@@ -100,6 +101,98 @@ input[type=range].hrange{width:100%;height:28px;margin:0;accent-color:#B8860B;cu
 <span style="font-size: 15px; line-height: 1.6; color: #4A5566">Porovnáme ponuky bánk a vybavíme hypotéku od žiadosti až po čerpanie.</span>
 </a>
 </div>
+</div>
+</section>
+
+<!-- NACENENIE -->
+<section id="nacenenie" style="background: #EFEBE1; padding: 96px 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 0.28em; color: #8A6A2B">NACENENIE ZDARMA</span>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.1; color: #001939">Koľko stojí vaša nehnuteľnosť?</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.65; color: #4A5566">Vyplňte tri krátke kroky a do 24 hodín vám pošleme odhad trhovej ceny podľa aktuálnych predajov vo vašom okolí. Nezáväzne a zadarmo.</p>
+<ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 16px; color: #1B2533">
+<li style="display: flex; gap: 12px; align-items: flex-start"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8A6A2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Odhad podľa reálnych cien v Trenčíne a okolí</li>
+<li style="display: flex; gap: 12px; align-items: flex-start"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8A6A2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Bez záväzku – rozhodnutie je len na vás</li>
+<li style="display: flex; gap: 12px; align-items: flex-start"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#8A6A2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: none; margin-top: 2px"><path d="M20 6 9 17l-5-5"></path></svg>Ak chcete predať rýchlo, ponúkneme aj výkup</li>
+</ul>
+</div>
+<form id="nac-form" action="https://formsubmit.co/info@lumera.sk" method="POST" novalidate aria-label="Formulár na nacenenie nehnuteľnosti" style="flex: 1 1 560px; min-width: 0; background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; padding: 32px; display: flex; flex-direction: column; gap: 24px">
+<input type="hidden" name="_subject" value="Žiadosť o nacenenie nehnuteľnosti – lumera.sk"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" value="https://lumera.sk/?nacenenie=odoslane#nacenenie"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" name="Typ nehnuteľnosti" id="nf-typ"><input type="hidden" name="Počet izieb" id="nf-izby"><input type="hidden" name="Stav" id="nf-stav">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 0.16em; color: #8A6A2B"><span id="n-steptext">KROK 1 Z 3 · NEHNUTEĽNOSŤ</span></span>
+<div style="height: 6px; background: #EFEBE1; border-radius: 3px; overflow: hidden"><div id="n-bar" style="height: 100%; background: #D9AE52; border-radius: 3px; width: 33%"></div></div>
+</div>
+<div class="n-step" data-step="1" style="display: flex; flex-direction: column; gap: 24px">
+<div role="group" aria-label="Typ nehnuteľnosti" style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 15px; font-weight: 800; color: #001939">Typ nehnuteľnosti</span>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<button type="button" class="pill" data-group="nf-typ" data-value="Byt" aria-pressed="false">Byt</button>
+<button type="button" class="pill" data-group="nf-typ" data-value="Rodinný dom" aria-pressed="false">Rodinný dom</button>
+<button type="button" class="pill" data-group="nf-typ" data-value="Pozemok" aria-pressed="false">Pozemok</button>
+<button type="button" class="pill" data-group="nf-typ" data-value="Garsónka" aria-pressed="false">Garsónka</button>
+</div>
+</div>
+<div id="n-rooms" role="group" aria-label="Počet izieb" style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 15px; font-weight: 800; color: #001939">Počet izieb</span>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<button type="button" class="pill" data-group="nf-izby" data-value="1" aria-pressed="false">1</button>
+<button type="button" class="pill" data-group="nf-izby" data-value="2" aria-pressed="false">2</button>
+<button type="button" class="pill" data-group="nf-izby" data-value="3" aria-pressed="false">3</button>
+<button type="button" class="pill" data-group="nf-izby" data-value="4+" aria-pressed="false">4+</button>
+</div>
+</div>
+<div style="max-width: 260px"><div style="display: flex; flex-direction: column; gap: 8px">
+<label for="n-vymera" style="font-size: 15px; font-weight: 800; color: #001939">Výmera (m²)</label>
+<input id="n-vymera" type="number" placeholder="napr. 68" name="Výmera m2" min="1" style="height: 48px; padding: 0 14px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; font-size: 16px; font-family: inherit; color: #1B2533; width: 100%; box-sizing: border-box">
+</div>
+</div>
+<div role="group" aria-label="Stav" style="display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 15px; font-weight: 800; color: #001939">Stav</span>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<button type="button" class="pill" data-group="nf-stav" data-value="Pôvodný stav" aria-pressed="false">Pôvodný stav</button>
+<button type="button" class="pill" data-group="nf-stav" data-value="Po rekonštrukcii" aria-pressed="false">Po rekonštrukcii</button>
+<button type="button" class="pill" data-group="nf-stav" data-value="Novostavba" aria-pressed="false">Novostavba</button>
+</div>
+</div>
+</div>
+<div class="n-step" data-step="2" hidden style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="n-obec" style="font-size: 15px; font-weight: 800; color: #001939">Obec / mesto</label>
+<input id="n-obec" type="text" placeholder="napr. Trenčín" name="Obec" style="height: 48px; padding: 0 14px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; font-size: 16px; font-family: inherit; color: #1B2533; width: 100%; box-sizing: border-box">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="n-ulica" style="font-size: 15px; font-weight: 800; color: #001939">Ulica alebo časť obce</label>
+<input id="n-ulica" type="text" placeholder="napr. Sihoť" name="Ulica" style="height: 48px; padding: 0 14px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; font-size: 16px; font-family: inherit; color: #1B2533; width: 100%; box-sizing: border-box">
+</div>
+</div>
+<div class="n-step" data-step="3" hidden style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="n-meno" style="font-size: 15px; font-weight: 800; color: #001939">Meno a priezvisko</label>
+<input id="n-meno" type="text" name="Meno" style="height: 48px; padding: 0 14px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; font-size: 16px; font-family: inherit; color: #1B2533; width: 100%; box-sizing: border-box">
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="n-tel" style="font-size: 15px; font-weight: 800; color: #001939">Telefón</label>
+<input id="n-tel" type="tel" name="Telefón" style="height: 48px; padding: 0 14px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; font-size: 16px; font-family: inherit; color: #1B2533; width: 100%; box-sizing: border-box">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="n-mail" style="font-size: 15px; font-weight: 800; color: #001939">E-mail</label>
+<input id="n-mail" type="email" name="E-mail" style="height: 48px; padding: 0 14px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; font-size: 16px; font-family: inherit; color: #1B2533; width: 100%; box-sizing: border-box">
+</div>
+</div>
+<p style="margin: 0; font-size: 13px; color: #5C6472">Údaje použijeme len na pripravenie odhadu. Viac v časti <a href="ochrana-osobnych-udajov.html">Ochrana osobných údajov</a>.</p>
+</div>
+<div id="n-done" hidden style="display: flex; flex-direction: column; gap: 10px; padding: 12px 0">
+<span style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: #001939">Ďakujeme, žiadosť sme prijali.</span>
+<span style="font-size: 16px; color: #4A5566">Odhad ceny vám pošleme do 24 hodín. Ak sa ponáhľate, zavolajte na <a href="tel:+421949888663">0949 888 663</a>.</span>
+</div>
+<p id="n-err" role="alert" hidden style="margin: 0; font-size: 14px; font-weight: 700; color: #A3361F"></p>
+<div id="n-nav" style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center">
+<button type="button" id="n-back" hidden style="min-height: 52px; padding: 0 22px; border: 1px solid #CFC8B8; border-radius: 4px; background: #FFFFFF; color: #001939; font-size: 16px; font-weight: 700; font-family: inherit; cursor: pointer">← Späť</button>
+<button type="button" id="n-next" style="min-height: 52px; padding: 0 28px; border: none; border-radius: 4px; background: #001939; color: #F7F5F0; font-size: 16px; font-weight: 800; font-family: inherit; cursor: pointer; margin-left: auto">Pokračovať →</button>
+</div>
+</form>
 </div>
 </section>
 
@@ -511,6 +604,40 @@ input[type=range].hrange{width:100%;height:28px;margin:0;accent-color:#B8860B;cu
   $('h-price-num').addEventListener('input',function(){var v=Number(this.value)||0;$('h-price').value=Math.min(1000000,Math.max(10000,v));calc()});
   ['h-own','h-rate','h-years','h-fees'].forEach(function(id){$(id).addEventListener('input',calc)});
   calc();
+})();
+</script>
+<script>
+(function(){
+  var f=document.getElementById('nac-form'); if(!f)return;
+  var $=function(id){return document.getElementById(id)}, step=1,
+      names=['','NEHNUTEĽNOSŤ','LOKALITA','KONTAKT'];
+  f.querySelectorAll('.pill').forEach(function(b){b.addEventListener('click',function(){
+    $(b.dataset.group).value=b.dataset.value; err('');
+    if(b.dataset.group==='nf-typ'){var hide=b.dataset.value==='Pozemok'||b.dataset.value==='Garsónka';$('n-rooms').hidden=hide;if(hide)$('nf-izby').value='';}
+  })});
+  function err(t){$('n-err').textContent=t;$('n-err').hidden=!t}
+  function show(){
+    f.querySelectorAll('.n-step').forEach(function(d){d.hidden=Number(d.dataset.step)!==step});
+    $('n-steptext').textContent='KROK '+step+' Z 3 · '+names[step];
+    $('n-bar').style.width=Math.round(step/3*100)+'%';
+    $('n-back').hidden=step===1;
+    $('n-next').textContent=step===3?'Odoslať žiadosť':'Pokračovať →';
+  }
+  $('n-back').addEventListener('click',function(){step--;err('');show()});
+  $('n-next').addEventListener('click',function(){
+    if(step===1&&(!$('nf-typ').value||!(Number($('n-vymera').value)>0)))return err('Vyberte typ nehnuteľnosti a zadajte výmeru.');
+    if(step===2&&!$('n-obec').value.trim())return err('Zadajte obec alebo mesto.');
+    if(step===3){
+      if(!$('n-meno').value.trim()||(!$('n-tel').value.trim()&&!$('n-mail').value.trim()))return err('Zadajte meno a telefón alebo e-mail.');
+      if($('n-mail').value.trim()&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test($('n-mail').value.trim()))return err('Skontrolujte e-mailovú adresu.');
+      $('n-next').disabled=true;$('n-next').textContent='Odosielam…';return f.submit();
+    }
+    step++;err('');show();
+  });
+  if(/[?&]nacenenie=odoslane/.test(location.search)){
+    f.querySelectorAll('.n-step').forEach(function(d){d.hidden=true});
+    $('n-nav').hidden=true;$('n-done').hidden=false;$('n-steptext').textContent='HOTOVO';$('n-bar').style.width='100%';
+  }
 })();
 </script>
 <script>
