@@ -24,6 +24,7 @@ input[type=range].hrange{width:100%;height:28px;margin:0;accent-color:#B8860B;cu
 body{margin:0;background:#F7F5F0}
 a{color:#8A6A2B}a:hover{color:#5E4719}
 input[type=range].hrange{width:100%;height:28px;margin:0;accent-color:#B8860B;cursor:pointer}
+.card-note:empty{display:none}
 .lm-mmenu{display:none}
 .lm-mlink{display:flex;align-items:center;min-height:52px;color:#F7F5F0;text-decoration:none;font-size:17px;font-weight:700;border-bottom:1px solid #12305A}
 .lm-mlink[aria-current]{color:#D9AE52}
@@ -252,7 +253,7 @@ form[style*="background"]{padding:22px!important}
 </div>
 <script>
 (function(){
-  var F=["img/byt-28-oktobra/01.jpg", "img/byt-28-oktobra/02.jpg", "img/byt-28-oktobra/03.jpg", "img/byt-28-oktobra/04.jpg", "img/byt-28-oktobra/05.jpg", "img/byt-28-oktobra/06.jpg", "img/byt-28-oktobra/07.jpg", "img/byt-28-oktobra/08.jpg", "img/byt-28-oktobra/09.jpg", "img/byt-28-oktobra/10.jpg"], K=["real", "real", "real", "real", "real", "vis", "vis", "vis", "vis", "plan"], B={"real": "Aktuálny stav", "vis": "Vizualizácia možnej rekonštrukcie", "plan": "Pôdorys (orientačný)"}, S={"real": "background: #001939; color: #F7F5F0", "vis": "background: #D9AE52; color: #001939", "plan": "background: #FFFFFF; color: #001939"}, i=0, $=function(id){return document.getElementById(id)};
+  var F=["img/byt-28-oktobra/01.jpg", "img/byt-28-oktobra/02.jpg", "img/byt-28-oktobra/03.jpg", "img/byt-28-oktobra/04.jpg", "img/byt-28-oktobra/05.jpg", "img/byt-28-oktobra/06.jpg", "img/byt-28-oktobra/07.jpg", "img/byt-28-oktobra/08.jpg", "img/byt-28-oktobra/09.jpg", "img/byt-28-oktobra/10.jpg"], K=["real", "real", "real", "real", "real", "vis", "vis", "vis", "vis", "plan"], B={"real": "Aktuálny stav", "vis": "Vizualizácia možnej rekonštrukcie", "plan": "Pôdorys (orientačný)", "visb": "Vizualizácia možnej výstavby"}, S={"real": "background: #001939; color: #F7F5F0", "vis": "background: #D9AE52; color: #001939", "plan": "background: #FFFFFF; color: #001939", "visb": "background: #D9AE52; color: #001939"}, i=0, $=function(id){return document.getElementById(id)};
   if(!$('g-img'))return;
   var th=document.querySelectorAll('.g-th');
   function show(j){

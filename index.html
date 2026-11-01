@@ -24,6 +24,7 @@ input[type=range].hrange{width:100%;height:28px;margin:0;accent-color:#B8860B;cu
 body{margin:0;background:#F7F5F0}
 a{color:#8A6A2B}a:hover{color:#5E4719}
 input[type=range].hrange{width:100%;height:28px;margin:0;accent-color:#B8860B;cursor:pointer}
+.card-note:empty{display:none}
 .lm-mmenu{display:none}
 .lm-mlink{display:flex;align-items:center;min-height:52px;color:#F7F5F0;text-decoration:none;font-size:17px;font-weight:700;border-bottom:1px solid #12305A}
 .lm-mlink[aria-current]{color:#D9AE52}
@@ -169,6 +170,7 @@ form[style*="background"]{padding:22px!important}
 <article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
 <a href="https://www.nehnutelnosti.sk/detail/JuYaNZ8aLO5/exkluzivne--5-izbovy-nizkoenergeticky-rodinny-dom-s-dvojgarazoul-fotovoltikou-a-krasnym-vyhladom--trencianske-mitice" aria-label="Nízkoenergetický dom s dvojgarážou a fotovoltikou" style="position: relative; height: 220px; background: #DCD6C8 none center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
 <span style="font-weight: 700; color: #001939">Fotografie v inzeráte →</span>
+<span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px"></span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Exkluzívne</span>
 </a>
 <div style="padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1">
@@ -186,6 +188,7 @@ form[style*="background"]{padding:22px!important}
 <article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
 <a href="byt-28-oktobra.html" aria-label="3-izbový byt s 2 balkónmi v tehlovom dome" style="position: relative; height: 220px; background: #DCD6C8 url('img/byt-28-oktobra/01.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
 
+<span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px"></span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Predaj</span>
 </a>
 <div style="padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1">
@@ -201,8 +204,9 @@ form[style*="background"]{padding:22px!important}
 </article>
 
 <article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
-<a href="https://www.nehnutelnosti.sk/detail/JuC7ZA7Nc1h/lumera--slnecny-pozemok-770-m-v-zamarovciach--pokoj-slepej-ulicel-trencin-na-dosah" aria-label="Slnečný pozemok v pokojnej slepej ulici" style="position: relative; height: 220px; background: #DCD6C8 none center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
-<span style="font-weight: 700; color: #001939">Fotografie v inzeráte →</span>
+<a href="pozemok-zamarovce.html" aria-label="Slnečný pozemok v pokojnej slepej ulici" style="position: relative; height: 220px; background: #DCD6C8 url('img/pozemok-zamarovce/01.jpg') center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
+
+<span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px">Vizualizácia možnej výstavby</span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Predaj</span>
 </a>
 <div style="padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1">
@@ -213,13 +217,14 @@ form[style*="background"]{padding:22px!important}
 <span style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: #001939">143 400 €</span>
 <span style="font-size: 13px; color: #6B5220; font-weight: 600">Pomôžeme aj s hypotékou</span>
 </div>
-<a href="https://www.nehnutelnosti.sk/detail/JuC7ZA7Nc1h/lumera--slnecny-pozemok-770-m-v-zamarovciach--pokoj-slepej-ulicel-trencin-na-dosah" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
+<a href="pozemok-zamarovce.html" style="margin-top: 10px; text-align: center; text-decoration: none; background: #001939; color: #F7F5F0; padding: 13px; border-radius: 4px; font-weight: 700; font-size: 15px">Zobraziť ponuku</a>
 </div>
 </article>
 
 <article style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
 <a href="https://www.nehnutelnosti.sk/detail/JuFskpCe2Xm/na-prenajom-stylovy-2-izbovy-byt-s-loggiou-a-parkovacim-miestom--45-ml-k-dispozicii-ihned" aria-label="Štýlový 2-izbový byt s loggiou a parkovaním" style="position: relative; height: 220px; background: #DCD6C8 none center / cover no-repeat; display: flex; align-items: center; justify-content: center; color: #5C6472; font-size: 12px; letter-spacing: 0.08em; text-decoration: none">
 <span style="font-weight: 700; color: #001939">Fotografie v inzeráte →</span>
+<span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px"></span>
 <span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">Prenájom</span>
 </a>
 <div style="padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1">
