@@ -1,0 +1,16 @@
+{
+  "_info": "Prehľad príspevkov na FB stránku Samuel Bucha Realitné Služby a IG @samuelbucha_realitne_sluzby. Plánovaná úloha sem dopisuje každý zverejnený príspevok.",
+  "posts": [
+    {"date": "2026-07-11", "type": "inzerat", "topic": "4-izbový byt 28. októbra (už predaný/neaktuálny)"},
+    {"date": "2026-08-25", "type": "predane", "topic": "2-izbový byt Trenčín Juh – predané"},
+    {"date": "2026-08-26", "type": "inzerat", "topic": "Investičná garsónka Staničná, Trenčín"},
+    {"date": "2026-09-18", "type": "predane", "topic": "1-izbový byt Odevná, Trenčín – predané"},
+    {"date": "2026-10-23", "type": "inzerat", "topic": "pozemok-zamarovce.html"},
+    {"date": "2026-10-23", "type": "inzerat", "topic": "dom-trebichava.html"},
+    {"date": "2026-10-29", "type": "inzerat", "topic": "byt-28-oktobra.html"},
+    {"date": "2026-11-02", "type": "web", "topic": "Máme nový web lumera.sk", "image": "social/novy-web-2026-11.jpg"}
+  ],
+  "ready_not_published": [
+    {"type": "inzerat", "topic": "dom-trencianska-turna.html", "note": "Karusel: titulka + fotky 02,04,05,07,09,12,20 z img/dom-turna/. Text pripravený 2026-11-02, čaká na schválenie."}
+  ]
+}
