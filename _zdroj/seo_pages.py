@@ -209,8 +209,8 @@ def home_teaser():
             '<div style="display: flex; flex-direction: column; gap: 12px"><p style="%s; color: %s">RADY A TIPY</p><h2 style="%s">Užitočné články pre predávajúcich aj kupujúcich</h2></div>\n'
             '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%%, 280px), 1fr)); gap: 20px">%s</div>\n'
             '<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 12px"><h3 style="margin: 0; font-size: 18px; font-weight: 800; color: %s">Realitná kancelária pre Trenčín a okolie</h3>'
-            '<div style="display: flex; flex-wrap: wrap; gap: 10px">%s</div></div>\n</div>\n</section>\n<!-- /BLOG TEASER -->\n\n') % (
-        WRAP, EYEBROW, GOLD_D, H2, ''.join(post_card(p) for p in POSTS[:4]), NAVY, links)
+            '<div style="display: flex; flex-wrap: wrap; gap: 10px">%s</div></div>\n</div>\n</section>\n%s<!-- /BLOG TEASER -->\n\n') % (
+        WRAP, EYEBROW, GOLD_D, H2, ''.join(post_card(p) for p in POSTS[:4]), NAVY, links, __import__('ai').faq_block())
 
 
 def build():

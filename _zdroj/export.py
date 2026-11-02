@@ -224,6 +224,8 @@ print('ok', sorted(os.listdir(OUT)))
 shutil.copy(SP + '/lumera/obhliadka.jpg', OUT + '/img/obhliadka.jpg')
 import seo_pages  # local landing pages, blog, footer area links
 seo_pages.build()
+import ai  # llms.txt, robots.txt for AI crawlers, IndexNow key
+ai.write(OUT)
 import optimize  # lighter images
 optimize.main()
 import en_build  # English version + SK/EN switch

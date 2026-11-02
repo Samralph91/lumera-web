@@ -54,7 +54,13 @@ def head_tags(static_name, title, desc, image):
             'telephone': '+421949888663', 'email': 'info@lumera.sk',
             'address': {'@type': 'PostalAddress', 'streetAddress': 'Legionárska 6419', 'postalCode': '911 01',
                         'addressLocality': 'Trenčín', 'addressCountry': 'SK'},
-            'areaServed': 'Trenčín a okolie', 'founder': {'@type': 'Person', 'name': 'Samuel Bucha'},
+            'areaServed': [{'@type': 'City', 'name': c} for c in ('Trenčín', 'Trenčianske Teplice', 'Nemšová', 'Dubnica nad Váhom', 'Bánovce nad Bebravou')],
+            'founder': {'@type': 'Person', 'name': 'Samuel Bucha', 'jobTitle': 'Managing Director, Real Estate Consultant'},
+            'description': 'Realitná kancelária v Trenčíne – predaj, kúpa, prenájom a výkup nehnuteľností, bezplatné nacenenie, právny servis a hypotekárne poradenstvo.',
+            'legalName': 'LUMERA Real Estate s.r.o.', 'taxID': '57307440',
+            'knowsAbout': ['predaj nehnuteľností', 'nacenenie nehnuteľností', 'výkup nehnuteľností', 'hypotéky', 'home staging'],
+            'sameAs': ['https://www.facebook.com/share/1A1Pwqz7iJ/', 'https://www.instagram.com/samuelbucha_realitne_sluzby/',
+                       'https://www.nehnutelnosti.sk/realitna-kancelaria/lumera-real-estate-sro/centrala/o-firme/9caeb98b-aa6d-427b-87d2-39b074880e59'],
         }
         tags.append('<script type="application/ld+json">%s</script>' % json.dumps(org, ensure_ascii=False))
     return '\n'.join(tags) + '\n'

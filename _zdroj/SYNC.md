@@ -22,3 +22,8 @@ Zdroj webu je v tomto priečinku (`_zdroj/`, GitHub Pages ho nezverejňuje – p
 - Preklad: nové texty doplň do `tr_en3.py` (inak ostanú v anglickej verzii po slovensky – `en_build` ich vypíše ako UNTRANSLATED).
 - Poradie fotiek: Samuel chce najprv reálne fotky, vizualizácie označené; pri pozemkoch najprv fotky s vyznačenou hranicou.
 - Maklérka Katarína Ribovičová (0904 255 252) – `agent: ('Maklérka', 'Katarína Ribovičová', '0904 255 252')`.
+
+## IndexNow (Bing → ChatGPT, Copilot)
+Po každom nahratí zmien pošli zmenené URL na IndexNow (z Composio workbench, tento kontajner na internet nedosiahne):
+POST https://api.indexnow.org/indexnow  JSON {"host":"lumera.sk","key":"7f3c9a2e5b8d4f16a0c2e9b7d4a1f358","keyLocation":"https://lumera.sk/7f3c9a2e5b8d4f16a0c2e9b7d4a1f358.txt","urlList":[...]}
+(kľúč je v ai.py). Pri zmene ponuky pošli aj https://lumera.sk/ponuka.html, https://lumera.sk/llms.txt a https://lumera.sk/sitemap.xml.
