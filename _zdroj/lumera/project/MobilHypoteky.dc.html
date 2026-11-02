@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<title>Hypotéky a hypokalkulačka – LUMERA Real Estate</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F7F5F0}
+a{color:#8A6A2B}a:hover{color:#5E4719}
+input[type=range].hrange{width:100%;height:28px;margin:0;accent-color:#B8860B;cursor:pointer}
+.lm-mmenu{display:none}
+.lm-mlink{display:flex;align-items:center;min-height:52px;color:#F7F5F0;text-decoration:none;font-size:17px;font-weight:700;border-bottom:1px solid #12305A}
+.lm-mlink[aria-current]{color:#D9AE52}
+.lm-mmenu summary{list-style:none}.lm-mmenu summary::-webkit-details-marker{display:none}
+.lm-mmenu .lm-x{display:none}.lm-mmenu[open] .lm-x{display:block}.lm-mmenu[open] .lm-bars{display:none}
+@media (max-width: 1080px){
+.lm-top{display:none!important}
+.lm-nav,.lm-call-full{display:none!important}
+.lm-mmenu,.lm-call-icon{display:flex!important}
+.lm-head{flex-wrap:nowrap!important;padding:12px 16px!important}
+.lm-logo{margin-left:0!important}.lm-logo img{height:52px!important}
+}
+@media (max-width: 640px){
+section{padding-top:56px!important;padding-bottom:56px!important}
+.lm-hero{padding:72px 20px 80px!important;gap:20px!important}
+.lm-hero-shade{background:linear-gradient(180deg,rgba(0,25,57,0.85) 0%,rgba(0,25,57,0.7) 100%)!important}
+.lm-cta{flex-direction:column}.lm-cta a{text-align:center}
+[style*="gap: 56px"]{gap:32px!important}
+form[style*="background"]{padding:22px!important}
+[style*="padding: 36px"],[style*="padding: 32px"]{padding:24px!important}
+.lm-portrait{box-shadow:0 0 0 1px #E4DFD3,10px 10px 0 0 #D9AE52!important;max-width:calc(100% - 10px)!important}
+.lm-wa{width:52px!important;height:52px!important;right:16px!important;bottom:16px!important}
+}
+</style>
+</helmet>
+<div style="font-family: 'Manrope', system-ui, sans-serif; color: #1B2533; background: #F7F5F0; width: 100%; position: relative">
+
+<!-- HORNÝ PRUH -->
+<div class="lm-top" style="background: #00112A; color: #C7CFDB; font-size: 13px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 8px 24px; display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; align-items: center">
+<span>Predaj · Kúpa · Výkup · Právny servis · Hypotéky</span>
+<div style="display: flex; gap: 20px; align-items: center">
+<a href="mailto:info@lumera.sk" style="color: #C7CFDB; text-decoration: none">info@lumera.sk</a>
+<span style="display: flex; gap: 10px; font-weight: 700"><span style="color: {{accent}}">SK</span><span>EN</span></span>
+</div>
+</div>
+</div>
+
+<!-- HLAVIČKA -->
+<header style="position: relative; z-index: 40; background: #001939; color: #F7F5F0; border-bottom: 1px solid #12305A">
+<div class="lm-head" style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: center; justify-content: space-between">
+<a href="Main.dc.html" class="lm-logo" style="display: flex; align-items: center; margin-left: 16px"><img src="/_blob/f5d4ae16313d223686d3f437daaac616" alt="LUMERA Real Estate" style="height: 64px; width: auto; display: block"></a>
+<nav class="lm-nav" aria-label="Hlavná navigácia" style="display: flex; flex-wrap: wrap; gap: 4px 24px; align-items: center; font-size: 15px; font-weight: 600">
+<a href="ONas.dc.html" style="color: #F7F5F0; text-decoration: none; padding: 10px 0">O nás</a>
+<a href="Ponuka.dc.html" style="color: #F7F5F0; text-decoration: none; padding: 10px 0">Ponuka nehnuteľností</a>
+<a href="Nacenenie.dc.html" style="color: #F7F5F0; text-decoration: none; padding: 10px 0">Nacenenie</a>
+<a href="Vykup.dc.html" style="color: #F7F5F0; text-decoration: none; padding: 10px 0">Výkup nehnuteľností</a>
+<a href="Hypoteky.dc.html" aria-current="page" style="color: {{accent}}; text-decoration: none; padding: 10px 0">Hypotéky</a>
+<a href="PravneSluzby.dc.html" style="color: #F7F5F0; text-decoration: none; padding: 10px 0">Právne služby</a>
+<a href="Kontakt.dc.html" style="color: #F7F5F0; text-decoration: none; padding: 10px 0">Kontakt</a>
+</nav>
+<a href="tel:+421949888663" class="lm-call-full" style="display: flex; align-items: center; gap: 10px; background: {{accent}}; color: #001939; text-decoration: none; padding: 12px 20px; border-radius: 4px; font-weight: 800; font-size: 15px">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#001939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
+0949 888 663
+</a>
+<div style="display: flex; align-items: center; gap: 10px">
+<a href="tel:+421949888663" class="lm-call-icon" aria-label="Zavolať 0949 888 663" style="display: none; width: 48px; height: 48px; align-items: center; justify-content: center; border-radius: 4px; background: {{accent}}"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#001939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></a>
+<details class="lm-mmenu">
+<summary aria-label="Menu" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border: 1px solid #2A4C7E; border-radius: 4px; cursor: pointer">
+<svg class="lm-bars" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F7F5F0" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+<svg class="lm-x" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F7F5F0" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+</summary>
+<nav aria-label="Mobilná navigácia" style="position: absolute; left: 0; right: 0; top: 100%; background: #001939; border-top: 1px solid #12305A; box-shadow: 0 18px 30px rgba(0,17,42,0.45); padding: 4px 20px 24px; display: flex; flex-direction: column">
+<a href="ONas.dc.html" class="lm-mlink">O nás</a>
+<a href="Ponuka.dc.html" class="lm-mlink">Ponuka nehnuteľností</a>
+<a href="Nacenenie.dc.html" class="lm-mlink">Nacenenie</a>
+<a href="Vykup.dc.html" class="lm-mlink">Výkup nehnuteľností</a>
+<a href="Hypoteky.dc.html" class="lm-mlink" aria-current="page">Hypotéky</a>
+<a href="PravneSluzby.dc.html" class="lm-mlink">Právne služby</a>
+<a href="Kontakt.dc.html" class="lm-mlink">Kontakt</a>
+<div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px">
+<a href="tel:+421949888663" style="display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; background: {{accent}}; color: #001939; text-decoration: none; border-radius: 4px; font-weight: 800; font-size: 16px">Zavolať 0949 888 663</a>
+<a href="mailto:info@lumera.sk" style="display: flex; align-items: center; justify-content: center; min-height: 48px; border: 1px solid #2A4C7E; color: #F7F5F0; text-decoration: none; border-radius: 4px; font-weight: 700; font-size: 15px">info@lumera.sk</a>
+</div>
+</nav>
+</details>
+</div>
+</div>
+</header>
+
+<!-- HYPOTÉKA -->
+<section id="hypoteka" style="background: #FFFFFF; border-top: 1px solid #E4DFD3; padding: 96px 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 14px; max-width: 720px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 0.28em; color: #8A6A2B">HYPOKALKULAČKA</span>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.1; color: #001939">Koľko budete splácať?</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #4A5566">Vypočítajte si orientačnú mesačnú splátku. Najvýhodnejšiu ponuku z bánk vám potom nájdeme my.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: stretch">
+
+<form style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: center">
+<label for="h-price" style="font-size: 15px; font-weight: 800; color: #001939">Cena nehnuteľnosti</label>
+<span style="display: flex; align-items: center; gap: 8px"><input value="{{hypo.price}}" onChange="{{hypo.on_price}}" type="number" min="0" max="2000000" step="1000" aria-label="Cena nehnuteľnosti v eurách" style="width: 140px; height: 44px; padding: 0 12px; border-radius: 4px; border: 1px solid #CFC8B8; font-size: 16px; font-weight: 700; font-family: inherit; color: #001939; text-align: right"><span style="font-weight: 700; color: #001939">€</span></span>
+</div>
+<input id="h-price" value="{{hypo.price}}" onChange="{{hypo.on_price}}" type="range" min="10000" max="1000000" step="1000" class="hrange">
+<div style="display: flex; justify-content: space-between; font-size: 13px; color: #5C6472"><span>10 000 €</span><span>1 000 000 €</span></div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: space-between; align-items: baseline">
+<label for="h-own" style="font-size: 15px; font-weight: 800; color: #001939">Vlastné zdroje</label>
+<span style="font-size: 16px; font-weight: 700; color: #001939">{{hypo.ownLabel}}</span>
+</div>
+<input id="h-own" value="{{hypo.own}}" onChange="{{hypo.on_own}}" type="range" min="0" max="100" step="1" class="hrange">
+<sc-if value="{{hypo.lowOwn}}" hint-placeholder-val="{{ false }}"><p style="margin: 0; font-size: 13px; color: #6B5220; font-weight: 600">Banky na Slovensku zvyčajne požičajú najviac 90 % hodnoty nehnuteľnosti.</p></sc-if>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px">
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
+<label for="h-rate" style="font-size: 15px; font-weight: 800; color: #001939">Úroková sadzba</label>
+<span style="font-size: 16px; font-weight: 700; color: #001939">{{hypo.rateLabel}}</span>
+</div>
+<input id="h-rate" value="{{hypo.rate}}" onChange="{{hypo.on_rate}}" type="range" min="0.1" max="7" step="0.05" class="hrange">
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
+<label for="h-years" style="font-size: 15px; font-weight: 800; color: #001939">Splatnosť</label>
+<span style="font-size: 16px; font-weight: 700; color: #001939">{{hypo.yearsLabel}}</span>
+</div>
+<input id="h-years" value="{{hypo.years}}" onChange="{{hypo.on_years}}" type="range" min="1" max="30" step="1" class="hrange">
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px">
+<label for="h-fees" style="font-size: 15px; font-weight: 800; color: #001939">Jednorazové poplatky</label>
+<span style="font-size: 16px; font-weight: 700; color: #001939">{{hypo.feesLabel}}</span>
+</div>
+<input id="h-fees" value="{{hypo.fees}}" onChange="{{hypo.on_fees}}" type="range" min="0" max="10000" step="50" class="hrange">
+</div>
+</div>
+</form>
+
+<div style="flex: 1 1 360px; min-width: 0; background: #001939; color: #F7F5F0; border-radius: 6px; padding: 36px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 0.2em; color: #D9AE52">MESAČNÁ SPLÁTKA</span>
+<span aria-live="polite" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2.6rem, 5vw, 3.6rem); font-weight: 700; line-height: 1">{{hypo.monthly}}</span>
+</div>
+<dl style="margin: 0; display: flex; flex-direction: column; gap: 12px; font-size: 15px; border-top: 1px solid #1C3D6B; padding-top: 20px">
+<div style="display: flex; justify-content: space-between; gap: 16px"><dt style="color: #C7CFDB">Výška úveru</dt><dd style="margin: 0; font-weight: 700">{{hypo.loan}}</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 16px"><dt style="color: #C7CFDB">Zaplatené úroky</dt><dd style="margin: 0; font-weight: 700">{{hypo.interest}}</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 16px"><dt style="color: #C7CFDB">Jednorazové poplatky</dt><dd style="margin: 0; font-weight: 700">{{hypo.fees2}}</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; border-top: 1px solid #1C3D6B; padding-top: 12px"><dt style="color: #F7F5F0; font-weight: 700">Zaplatené banke celkom</dt><dd style="margin: 0; font-weight: 800; color: #D9AE52">{{hypo.total}}</dd></div>
+</dl>
+<a href="#kontakt" style="margin-top: auto; text-align: center; background: #D9AE52; color: #001939; text-decoration: none; padding: 16px 20px; border-radius: 4px; font-weight: 800; font-size: 16px">Chcem nezáväznú ponuku hypotéky</a>
+<p style="margin: 0; font-size: 12px; line-height: 1.5; color: #A9B4C6">Výpočet má len informatívny charakter a nie je ponukou úveru. Skutočná splátka závisí od banky, fixácie a vašej bonity.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt" style="background: #001939; color: #F7F5F0; padding: 104px 0">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 56px">
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 0.28em; color: {{accent}}">KDE NÁS NÁJDETE</span>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.1">Dohodnime si nezáväzné stretnutie</h2>
+<div style="display: flex; flex-direction: column; gap: 14px; font-size: 16px">
+<p style="margin: 0"><strong style="color: {{accent}}">Adresa:</strong> Legionárska 6419, 911 01 Trenčín</p>
+<p style="margin: 0"><strong style="color: {{accent}}">Telefón:</strong> <a href="tel:+421949888663" style="color: #F7F5F0">0949 888 663</a></p>
+<p style="margin: 0"><strong style="color: {{accent}}">E-mail:</strong> <a href="mailto:info@lumera.sk" style="color: #F7F5F0">info@lumera.sk</a></p>
+</div>
+<a id="mapa" href="https://www.google.com/maps/search/?api=1&amp;query=Legion%C3%A1rska+6419%2C+911+01+Tren%C4%8D%C3%ADn" style="height: 260px; border-radius: 6px; background: #0A2850; border: 1px solid #1C3D6B; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: #F7F5F0; text-decoration: none; text-align: center; padding: 24px"><svg aria-hidden="true" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#D9AE52" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg><span style="font-size: 17px; font-weight: 800">Legionárska 6419, Trenčín</span><span style="font-size: 14px; color: #D9AE52; font-weight: 700">Otvoriť v Google Mapách →</span><span style="font-size: 12px; color: #8D9AB0">Na lumera.sk tu bude interaktívna mapa Google</span></a>
+</div>
+<form style="flex: 1 1 460px; min-width: 0; background: #0A2850; border: 1px solid #1C3D6B; border-radius: 6px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; flex-wrap: wrap; gap: 18px">
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 8px">
+<label for="meno" style="font-size: 14px; font-weight: 700">Meno a priezvisko</label>
+<input id="meno" type="text" style="height: 48px; padding: 0 14px; border-radius: 4px; border: 1px solid #2A4C7E; background: #001939; color: #F7F5F0; font-size: 16px; font-family: inherit">
+</div>
+<div style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 8px">
+<label for="telefon" style="font-size: 14px; font-weight: 700">Telefón</label>
+<input id="telefon" type="tel" style="height: 48px; padding: 0 14px; border-radius: 4px; border: 1px solid #2A4C7E; background: #001939; color: #F7F5F0; font-size: 16px; font-family: inherit">
+</div>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="email" style="font-size: 14px; font-weight: 700">E-mail</label>
+<input id="email" type="email" style="height: 48px; padding: 0 14px; border-radius: 4px; border: 1px solid #2A4C7E; background: #001939; color: #F7F5F0; font-size: 16px; font-family: inherit">
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="zaujem" style="font-size: 14px; font-weight: 700">Mám záujem o</label>
+<select id="zaujem" style="height: 48px; padding: 0 14px; border-radius: 4px; border: 1px solid #2A4C7E; background: #001939; color: #F7F5F0; font-size: 16px; font-family: inherit">
+<option>Predaj nehnuteľnosti</option>
+<option>Kúpu nehnuteľnosti</option>
+<option>Výkup nehnuteľnosti</option>
+<option>Právne služby</option>
+<option>Hypotekárne poradenstvo</option>
+</select>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<label for="sprava" style="font-size: 14px; font-weight: 700">Správa</label>
+<textarea id="sprava" rows="4" style="padding: 12px 14px; border-radius: 4px; border: 1px solid #2A4C7E; background: #001939; color: #F7F5F0; font-size: 16px; font-family: inherit; resize: vertical"></textarea>
+</div>
+<button type="button" style="height: 52px; border: none; border-radius: 4px; background: {{accent}}; color: #001939; font-size: 16px; font-weight: 800; font-family: inherit; cursor: pointer">Odoslať správu</button>
+<p style="margin: 0; font-size: 13px; color: #A9B4C6">Vaše údaje použijeme len na vybavenie vašej požiadavky. Viac v časti <a href="ochrana-osobnych-udajov.html" style="color: #D9AE52">Ochrana osobných údajov</a>.</p>
+</form>
+</div>
+</section>
+
+<!-- PÄTA -->
+<footer style="background: #00112A; color: #A9B4C6; font-size: 14px">
+<div style="max-width: 1240px; margin: 0 auto; padding: 48px 24px 32px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 48px; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<img src="/_blob/f5d4ae16313d223686d3f437daaac616" alt="LUMERA Real Estate" style="height: 56px; width: auto; display: block; align-self: flex-start">
+<span>LUMERA Real Estate s.r.o. · IČO: 57307440 · Legionárska 6419, 911 01 Trenčín</span>
+</div>
+<nav aria-label="Päta" style="display: flex; flex-wrap: wrap; gap: 8px 24px">
+<a href="Hypoteky.dc.html" style="color: #C7CFDB; text-decoration: none; padding: 8px 0">Hypotekárna kalkulačka</a>
+<a href="ochrana-osobnych-udajov.html" style="color: #C7CFDB; text-decoration: none; padding: 8px 0">Ochrana osobných údajov</a>
+<a href="Kontakt.dc.html" style="color: #C7CFDB; text-decoration: none; padding: 8px 0">Cookies</a>
+<a href="Kontakt.dc.html" style="color: #C7CFDB; text-decoration: none; padding: 8px 0">Facebook</a>
+<a href="Kontakt.dc.html" style="color: #C7CFDB; text-decoration: none; padding: 8px 0">Instagram</a>
+</nav>
+</div>
+<span style="border-top: 1px solid #12305A; padding-top: 20px">© 2026 LUMERA Real Estate s.r.o. Všetky práva vyhradené.</span>
+</div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/421949888663" class="lm-wa" aria-label="Napíšte nám na WhatsApp" style="position: fixed; right: 24px; bottom: 24px; width: 60px; height: 60px; border-radius: 50%; background: #1F8F4E; display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 18px rgba(0,0,0,0.25); z-index: 10">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.7-4.6A9 9 0 1 1 8 19.6Z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1a4 4 0 0 1-2-2l1-1-1-2Z"></path></svg>
+</a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#D9AE52","options":["#D9AE52","#E6C06A","#C29A45"]},"$preview":{"width":390,"height":3600}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { deal: 'kupa', type: 'byt', hprice: 150000, hown: 20, hrate: 3.5, hyears: 30, hfees: 0, nstep: 1, ntype: '', nrooms: '', ncond: '', narea: '', ntown: '', nstreet: '', nname: '', nphone: '', nmail: '', nerr: '' };
+  }
+  pill(active) {
+    return active
+      ? 'min-height: 44px; padding: 0 20px; border-radius: 4px; border: 1px solid #001939; background: #001939; color: #F7F5F0; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer'
+      : 'min-height: 44px; padding: 0 20px; border-radius: 4px; border: 1px solid #CFC8B8; background: #FFFFFF; color: #001939; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer';
+  }
+  hypo() {
+    const st = this.state;
+    const eur = (v, d) => v.toLocaleString('sk-SK', { minimumFractionDigits: d, maximumFractionDigits: d }) + ' €';
+    const price = Math.max(0, Number(st.hprice) || 0), own = Number(st.hown), rate = Number(st.hrate), years = Number(st.hyears), fees = Number(st.hfees);
+    const loan = Math.max(0, price * (1 - own / 100)), n = years * 12, r = rate / 100 / 12;
+    const m = loan <= 0 ? 0 : (r === 0 ? loan / n : loan * r / (1 - Math.pow(1 + r, -n)));
+    const set = (key) => (e) => this.setState({ [key]: e.target.value });
+    return {
+      price: st.hprice, own: st.hown, rate: st.hrate, years: st.hyears, fees: st.hfees,
+      on_price: set('hprice'), on_own: set('hown'), on_rate: set('hrate'), on_years: set('hyears'), on_fees: set('hfees'),
+      ownLabel: own + ' % · ' + eur(price * own / 100, 0),
+      rateLabel: rate.toLocaleString('sk-SK', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' %',
+      yearsLabel: years + (years === 1 ? ' rok' : years < 5 ? ' roky' : ' rokov'),
+      feesLabel: eur(fees, 0),
+      monthly: eur(m, 2), loan: eur(loan, 0), interest: eur(Math.max(0, m * n - loan), 2),
+      fees2: eur(fees, 2), total: eur(m * n + fees, 2),
+      lowOwn: own < 10 && loan > 0
+    };
+  }
+  val() {
+    const st = this.state;
+    const pill = (on) => this.pill(on);
+    const mk = (labels, key) => labels.map((l) => ({ label: l, style: pill(st[key] === l), pick: () => this.setState({ [key]: l, nerr: '' }) }));
+    const set = (key) => (e) => this.setState({ [key]: e.target.value, nerr: '' });
+    const names = ['', 'NEHNUTEĽNOSŤ', 'LOKALITA', 'KONTAKT', 'HOTOVO'];
+    const step = st.nstep;
+    const next = () => {
+      if (step === 1 && (!st.ntype || !(Number(st.narea) > 0))) return this.setState({ nerr: 'Vyberte typ nehnuteľnosti a zadajte výmeru.' });
+      if (step === 2 && !st.ntown.trim()) return this.setState({ nerr: 'Zadajte obec alebo mesto.' });
+      if (step === 3 && (!st.nname.trim() || (!st.nphone.trim() && !st.nmail.trim()))) return this.setState({ nerr: 'Zadajte meno a telefón alebo e-mail.' });
+      this.setState({ nstep: step + 1, nerr: '' });
+    };
+    return {
+      step: Math.min(step, 3), stepName: names[step],
+      bar: 'height: 100%; background: #D9AE52; border-radius: 3px; width: ' + Math.round(Math.min(step, 3) / 3 * 100) + '%',
+      s1: step === 1, s2: step === 2, s3: step === 3, done: step === 4,
+      types: mk(['Byt', 'Rodinný dom', 'Pozemok', 'Garsónka'], 'ntype'),
+      rooms: mk(['1', '2', '3', '4+'], 'nrooms'),
+      conds: mk(['Pôvodný stav', 'Po rekonštrukcii', 'Novostavba'], 'ncond'),
+      showRooms: st.ntype !== 'Pozemok' && st.ntype !== 'Garsónka',
+      area: st.narea, onArea: set('narea'), town: st.ntown, onTown: set('ntown'), street: st.nstreet, onStreet: set('nstreet'),
+      name: st.nname, onName: set('nname'), phone: st.nphone, onPhone: set('nphone'), mail: st.nmail, onMail: set('nmail'),
+      err: !!st.nerr, errText: st.nerr,
+      showNav: step < 4, showBack: step > 1 && step < 4,
+      back: () => this.setState({ nstep: step - 1, nerr: '' }), next: next,
+      nextLabel: step === 3 ? 'Odoslať žiadosť' : 'Pokračovať →'
+    };
+  }
+  renderVals() {
+    const deals = [{ id: 'kupa', label: 'Kúpa' }, { id: 'prenajom', label: 'Prenájom' }];
+    const types = [{ id: 'byt', label: 'Byt' }, { id: 'dom', label: 'Rodinný dom' }, { id: 'pozemok', label: 'Pozemok' }, { id: 'nebyt', label: 'Nebytový priestor' }];
+    return {
+      accent: this.props.accent ?? '#D9AE52',
+      hypo: this.hypo(),
+      val: this.val(),
+      deals: deals.map((d) => ({ ...d, style: this.pill(this.state.deal === d.id), pick: () => this.setState({ deal: d.id }) })),
+      types: types.map((t) => ({ ...t, style: this.pill(this.state.type === t.id), pick: () => this.setState({ type: t.id }) })),
+      listings: [
+        { tag: 'Exkluzívne', meta: 'Rodinný dom · 180 m² · 5 izieb', title: 'Nízkoenergetický dom s dvojgarážou a fotovoltikou', place: 'Trenčianske Mitice', price: 'Info v RK', note: 'Pomôžeme aj s hypotékou', href: 'https://www.nehnutelnosti.sk/detail/JuYaNZ8aLO5/exkluzivne--5-izbovy-nizkoenergeticky-rodinny-dom-s-dvojgarazoul-fotovoltikou-a-krasnym-vyhladom--trencianske-mitice' },
+        { tag: 'Predaj', meta: '3-izbový byt · 67 m²', title: '3-izbový byt s 2 balkónmi v tehlovom dome', place: 'Trenčín, 28. októbra', price: '139 900 €', note: 'Pomôžeme aj s hypotékou', href: 'https://www.nehnutelnosti.sk/detail/Juy2WHflF9P/lumera--na-predaj-3-izbovy-byt-s-2-balkonmi-v-tehlovom-dome--67-m--trencinl-28-oktobra' },
+        { tag: 'Predaj', meta: 'Pozemok · 770 m²', title: 'Slnečný pozemok v pokojnej slepej ulici', place: 'Zamarovce, Pod Kopánky', price: '143 400 €', note: 'Pomôžeme aj s hypotékou', href: 'https://www.nehnutelnosti.sk/detail/JuC7ZA7Nc1h/lumera--slnecny-pozemok-770-m-v-zamarovciach--pokoj-slepej-ulicel-trencin-na-dosah' },
+        { tag: 'Prenájom', meta: '2-izbový byt · 45 m²', title: 'Štýlový 2-izbový byt s loggiou a parkovaním', place: 'Trenčín, Odbojárov', price: '650 € / mes.', note: 'K dispozícii ihneď', href: 'https://www.nehnutelnosti.sk/detail/JuFskpCe2Xm/na-prenajom-stylovy-2-izbovy-byt-s-loggiou-a-parkovacim-miestom--45-ml-k-dispozicii-ihned' }
+      ],
+      reviews: [{ initial: 'V', name: 'Vierka Haskova', text: 'Maximálna spokojnosť, všetko prebehlo bez najmenších komplikácií. Ďakujem za ochotu a prístup.' }, { initial: 'D', name: 'Dana Juricova', text: 'S pánom Buchom bola výborná komunikácia, flexibilnosť, ochota, jednanie, pomoc s predajom rýchla. Odporúčam, budete milo prekvapení.' }, { initial: 'N', name: 'Nikole', text: 'Veľká spokojnosť, komunikácia, flexibilita, rozvážnosť, super ponuky, jednanie, ochota. Pomohol mi s predajom, rýchlo našiel kupcov, vrelo odporúčam. Top.' }, { initial: 'K', name: 'Karolína Martišková', text: 'Výborná komunikácia, ochota a individuálny prístup. Realitnú kanceláriu určite odporúčam. Najlepšia na trhu.' }]
+    };
+  }
+}
+</script>
+</body>
+</html>

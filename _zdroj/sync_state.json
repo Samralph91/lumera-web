@@ -1,0 +1,73 @@
+{
+ "_info": "Stav synchronizácie s nehnutelnosti.sk. sold = kľúče z listing.LISTINGS označené ako PREDANÉ. snapshot = posledný známy stav inzerátov RK na nehnutelnosti.sk.",
+ "agency_url": "https://www.nehnutelnosti.sk/realitna-kancelaria/lumera-real-estate-sro/centrala/inzeraty/9caeb98b-aa6d-427b-87d2-39b074880e59",
+ "sold": [],
+ "snapshot": [
+  {
+   "id": "Juy2WHflF9P",
+   "price": 139900
+  },
+  {
+   "id": "JuPG9x3kKat",
+   "price": 17990
+  },
+  {
+   "id": "JuC7ZA7Nc1h",
+   "price": 143400
+  },
+  {
+   "id": "Juv70iO-ike",
+   "price": 0
+  },
+  {
+   "id": "JuOmHgaAqgN",
+   "price": 350000
+  },
+  {
+   "id": "JugqcjiaalN",
+   "price": 199900
+  },
+  {
+   "id": "Ju6VgYo-1et",
+   "price": 69900
+  },
+  {
+   "id": "Ju5iHXyx7z7",
+   "price": 550000
+  },
+  {
+   "id": "JuYaNZ8aLO5",
+   "price": 0
+  },
+  {
+   "id": "JuFskpCe2Xm",
+   "price": 650
+  },
+  {
+   "id": "JuwhwM9a1WD",
+   "price": 459900
+  },
+  {
+   "id": "Ju1egIiVOxs",
+   "price": 920000
+  },
+  {
+   "id": "JueTT223oaW",
+   "price": 0
+  },
+  {
+   "id": "Jutneee1ns_",
+   "price": 0
+  },
+  {
+   "id": "JuwF0qyV0_S",
+   "price": 350000
+  }
+ ],
+ "snapshot_date": "2026-11-02",
+ "not_on_site": {
+  "JuOmHgaAqgN": "Rekreačný areál s jazerom pri Trenčianskych Tepliciach (1. inzerát) – čaká na pridanie na web; Samuel chcel fotky poslať sám, navrhnuté spojiť s JuwF0qyV0_S do jednej stránky.",
+  "JuwF0qyV0_S": "Rekreačný areál s jazerom pri Trenčianskych Tepliciach (2. inzerát, rovnaká nehnuteľnosť) – spojiť s JuOmHgaAqgN.",
+  "Jutneee1ns_": "Dopyt 'Hľadáme priemyselný pozemok – Trenčín a okolie' – nie je to nehnuteľnosť na predaj; na web patrí len ako sekcia 'Hľadáme pre klientov', ak to Samuel schváli."
+ }
+}
