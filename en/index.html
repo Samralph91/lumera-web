@@ -453,6 +453,18 @@ form[style*="background"]{padding:22px!important}
 document.querySelectorAll('.pill').forEach(function(b){b.addEventListener('click',function(){
 document.querySelectorAll('.pill[data-group="'+b.dataset.group+'"]').forEach(function(o){o.classList.remove('on');o.setAttribute('aria-pressed','false')});
 b.classList.add('on');b.setAttribute('aria-pressed','true');});});
+(function(){
+  if(!/[?&]odoslane=1/.test(location.search))return;
+  var d=document.createElement('div');d.setAttribute('role','status');
+  d.style.cssText='position:fixed;left:50%;top:max(16px,env(safe-area-inset-top,0px));transform:translateX(-50%);z-index:100;width:min(560px,calc(100% - 32px));box-sizing:border-box;background:#001939;color:#F7F5F0;border:1px solid #D9AE52;border-radius:6px;padding:18px 52px 18px 20px;box-shadow:0 18px 30px rgba(0,17,42,0.45);font-family:Manrope,system-ui,sans-serif;font-size:16px;line-height:1.5';
+  var t=document.createElement('strong');t.style.cssText='display:block;color:#D9AE52;font-size:17px;margin-bottom:4px';t.textContent='Thank you, we have received your message.';
+  var p=document.createElement('span');p.textContent='We\'ll get back to you as soon as possible, usually the same working day.';
+  var x=document.createElement('button');x.type='button';x.setAttribute('aria-label','Close');x.textContent='×';
+  x.style.cssText='position:absolute;top:8px;right:8px;width:40px;height:40px;border:0;background:transparent;color:#F7F5F0;font-size:26px;cursor:pointer';
+  x.onclick=function(){d.remove()};
+  d.appendChild(t);d.appendChild(p);d.appendChild(x);document.body.appendChild(d);
+  if(history.replaceState)history.replaceState(null,'',location.pathname+location.hash);
+})();
 </script>
 </body>
 </html>
