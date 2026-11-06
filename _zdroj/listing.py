@@ -98,8 +98,8 @@ LISTINGS = {
         'tag': 'Predaj',
         'title': 'Vidiecky dom v Trebichave – príležitosť na vlastnú chalupu',
         'place': 'Trebichava, okres Bánovce nad Bebravou',
-        'price': '17 990 €',
-        'per_m2': '360 € / m² úžitkovej plochy',
+        'price': '12 400 €',
+        'per_m2': '248 € / m² úžitkovej plochy',
         'facts': [
             ('Typ', 'rodinný dom (na LV)'), ('Úžitková plocha', '50 m²'), ('Pozemok', '327 m² vrátane zastavanej plochy'),
             ('Stav', 'pôvodný, na rekonštrukciu'), ('Rok výstavby', '1946 – 1969'), ('Konštrukcia', 'zmiešaná'),

@@ -8,7 +8,7 @@ import json, re
 FACTS = {
     'Byt28.dc.html':      dict(deal='kupa', type='byt', okres='Trenčín', price=139900, area=67, rooms=3, nov=False, park=False, order=1, kom=False),
     'Zamarovce.dc.html':  dict(deal='kupa', type='pozemok', okres='Trenčín', price=143400, area=770, rooms=0, nov=False, park=False, order=2, kom=False),
-    'Trebichava.dc.html': dict(deal='kupa', type='dom', okres='Bánovce nad Bebravou', price=17990, area=50, rooms=0, nov=False, park=False, order=3, kom=False),
+    'Trebichava.dc.html': dict(deal='kupa', type='dom', okres='Bánovce nad Bebravou', price=12400, area=50, rooms=0, nov=False, park=False, order=3, kom=False),
     'Myjava.dc.html':     dict(deal='kupa', type='byt', okres='Myjava', price=69900, area=34, rooms=1, nov=False, park=False, order=4, kom=False),
     'Mitice.dc.html':     dict(deal='kupa', type='dom', okres='Trenčín', price=None, area=180, rooms=5, nov=False, park=True, order=5, kom=False),
     'Malacky.dc.html':    dict(deal='kupa', type='pozemok', okres='Malacky', price=920000, area=13000, rooms=0, nov=False, park=False, order=6, kom=True),
