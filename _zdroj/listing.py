@@ -133,8 +133,8 @@ LISTINGS = {
         'tag': 'Predaj',
         'title': '1-izbový byt v pokojnej štvrti',
         'place': 'Myjava, Dolná štvrť',
-        'price': '69 900 €',
-        'per_m2': '2 056 € / m²',
+        'price': 'Cena dohodou',
+        'per_m2': 'Cenu vám rada povie maklérka',
         'facts': [
             ('Výmera', '34 m²'), ('Počet izieb', '1'), ('Poschodie', '1. z 6'), ('Konštrukcia', 'panelová'), ('Stav', 'čiastočná rekonštrukcia'),
             ('Bytové jadro', 'murované'), ('Elektroinštalácia', 'nová'), ('Kúrenie', 'ústredné'),
