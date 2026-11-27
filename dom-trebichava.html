@@ -206,7 +206,7 @@ form[style*="background"]{padding:22px!important}
 <p style="margin: 0"><strong style="color: #D9AE52">Telefón:</strong> <a href="tel:+421949888663" style="color: #F7F5F0">0949 888 663</a></p>
 <p style="margin: 0"><strong style="color: #D9AE52">E-mail:</strong> <a href="mailto:info@lumera.sk" style="color: #F7F5F0">info@lumera.sk</a></p>
 </div>
-<div style="display: flex; flex-direction: column; gap: 10px; height: 100%"><iframe title="Mapa – LUMERA Real Estate, Legionárska 6419, Trenčín" src="https://www.google.com/maps?q=Legion%C3%A1rska+6419,+911+01+Tren%C4%8D%C3%ADn&amp;hl=sk&amp;z=16&amp;output=embed" style="width: 100%; flex: 1; min-height: 300px; border: 0; border-radius: 6px" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><a href="https://www.google.com/maps/search/?api=1&amp;query=Legion%C3%A1rska+6419%2C+911+01+Tren%C4%8D%C3%ADn" style="color: #D9AE52; font-weight: 700; font-size: 14px">Otvoriť v Google Mapách →</a></div>
+<div style="display: flex; flex-direction: column; gap: 10px; height: 100%"><div class="lm-map" data-src="https://www.google.com/maps?q=Legion%C3%A1rska+6419,+911+01+Tren%C4%8D%C3%ADn&amp;hl=sk&amp;z=16&amp;output=embed" data-title="Mapa – LUMERA Real Estate, Legionárska 6419, Trenčín" style="position: relative; flex: 1; min-height: 300px; border-radius: 6px; overflow: hidden; background: #0A2850; border: 1px solid #1C3D6B"><div class="lm-map-ph" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; text-align: center; color: #F7F5F0"><strong style="font-size: 18px">Legionárska 6419, Trenčín</strong><span style="font-size: 14px; color: #C7CFDB; max-width: 340px">Mapu Google načítame až po vašom súhlase, pretože Google pri nej ukladá cookies.</span><button type="button" class="lm-map-on" style="min-height: 48px; padding: 0 22px; border: none; border-radius: 4px; background: #D9AE52; color: #001939; font: inherit; font-size: 15px; font-weight: 800; cursor: pointer">Zobraziť mapu</button></div></div><a href="https://www.google.com/maps/search/?api=1&amp;query=Legion%C3%A1rska+6419%2C+911+01+Tren%C4%8D%C3%ADn" style="color: #D9AE52; font-weight: 700; font-size: 14px">Otvoriť v Google Mapách →</a></div>
 </div>
 <form action="https://formsubmit.co/info@lumera.sk" method="POST" style="flex: 1 1 460px; min-width: 0; background: #0A2850; border: 1px solid #1C3D6B; border-radius: 6px; padding: 36px; display: flex; flex-direction: column; gap: 18px">
 <div style="display: flex; flex-wrap: wrap; gap: 18px">
@@ -308,6 +308,29 @@ b.classList.add('on');b.setAttribute('aria-pressed','true');});});
   x.onclick=function(){d.remove()};
   d.appendChild(t);d.appendChild(p);d.appendChild(x);document.body.appendChild(d);
   if(history.replaceState)history.replaceState(null,'',location.pathname+location.hash);
+})();
+</script>
+<!-- COOKIE CONSENT -->
+<div id="lm-cc" role="dialog" aria-live="polite" aria-label="Súhlas s cookies" hidden style="position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 200; max-width: 720px; margin: 0 auto; box-sizing: border-box; background: #001939; color: #F7F5F0; border: 1px solid #1C3D6B; border-radius: 8px; box-shadow: 0 18px 40px rgba(0,17,42,0.45); padding: 22px 24px; font-family: 'Manrope', system-ui, sans-serif; display: flex; flex-direction: column; gap: 14px">
+<strong style="font-size: 17px; color: #D9AE52">Cookies na webe lumera.sk</strong>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #E3E8F0">Náš web nepoužíva analytické ani reklamné cookies. Cookies môže uložiť iba služba Google Mapy, ktorú zobrazujeme na stránkach s mapou. Mapu načítame len s vaším súhlasom. <a href="cookies.html" style="color: #D9AE52; font-weight: 700">Viac o cookies</a></p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px">
+<button type="button" id="lm-cc-reject" style="min-height: 48px; padding: 0 22px; border-radius: 4px; font: inherit; font-size: 15px; font-weight: 800; cursor: pointer; flex: 1 1 160px; border: 1px solid #F7F5F0; background: transparent; color: #F7F5F0">Len nevyhnutné</button>
+<button type="button" id="lm-cc-accept" style="min-height: 48px; padding: 0 22px; border-radius: 4px; font: inherit; font-size: 15px; font-weight: 800; cursor: pointer; flex: 1 1 160px; border: 1px solid #D9AE52; background: #D9AE52; color: #001939">Prijať všetky</button>
+</div>
+</div>
+<script>
+(function(){
+  var K='lumera-cookies', v=null;
+  try{v=localStorage.getItem(K)}catch(e){}
+  var box=document.getElementById('lm-cc');
+  function maps(){document.querySelectorAll('.lm-map').forEach(function(m){if(m.querySelector('iframe'))return;var f=document.createElement('iframe');f.src=m.dataset.src;f.title=m.dataset.title||'Mapa';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';f.setAttribute('allowfullscreen','');f.style.cssText='position:absolute;inset:0;width:100%;height:100%;border:0';m.appendChild(f);var p=m.querySelector('.lm-map-ph');if(p)p.style.display='none'})}
+  function set(x){try{localStorage.setItem(K,x)}catch(e){}v=x;box.hidden=true;if(x==='all')maps()}
+  if(v==='all')maps(); else if(v!=='necessary')box.hidden=false;
+  document.getElementById('lm-cc-accept').addEventListener('click',function(){set('all')});
+  document.getElementById('lm-cc-reject').addEventListener('click',function(){set('necessary')});
+  document.querySelectorAll('.lm-map-on').forEach(function(b){b.addEventListener('click',function(){set('all')})});
+  document.querySelectorAll('.lm-cc-open').forEach(function(b){b.addEventListener('click',function(){try{localStorage.removeItem(K)}catch(e){}v=null;box.hidden=false;document.getElementById('lm-cc-accept').focus()})});
 })();
 </script>
 </body>

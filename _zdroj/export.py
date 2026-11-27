@@ -10,9 +10,14 @@ os.makedirs(OUT, exist_ok=True)
 MAP_SRC = 'https://www.google.com/maps?q=Legion%C3%A1rska+6419,+911+01+Tren%C4%8D%C3%ADn&amp;hl=sk&amp;z=16&amp;output=embed'
 MAP_HTML = (
     '<div style="display: flex; flex-direction: column; gap: 10px; height: 100%">'
-    '<iframe title="Mapa – LUMERA Real Estate, Legionárska 6419, Trenčín" src="' + MAP_SRC + '" '
-    'style="width: 100%; flex: 1; min-height: 300px; border: 0; border-radius: 6px" loading="lazy" '
-    'referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>'
+    '<div class="lm-map" data-src="' + MAP_SRC + '" data-title="Mapa – LUMERA Real Estate, Legionárska 6419, Trenčín" '
+    'style="position: relative; flex: 1; min-height: 300px; border-radius: 6px; overflow: hidden; background: #0A2850; border: 1px solid #1C3D6B">'
+    '<div class="lm-map-ph" style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; '
+    'gap: 12px; padding: 24px; text-align: center; color: #F7F5F0">'
+    '<strong style="font-size: 18px">Legionárska 6419, Trenčín</strong>'
+    '<span style="font-size: 14px; color: #C7CFDB; max-width: 340px">Mapu Google načítame až po vašom súhlase, pretože Google pri nej ukladá cookies.</span>'
+    '<button type="button" class="lm-map-on" style="min-height: 48px; padding: 0 22px; border: none; border-radius: 4px; background: #D9AE52; '
+    'color: #001939; font: inherit; font-size: 15px; font-weight: 800; cursor: pointer">Zobraziť mapu</button></div></div>'
     '<a href="https://www.google.com/maps/search/?api=1&amp;query=Legion%C3%A1rska+6419%2C+911+01+Tren%C4%8D%C3%ADn" '
     'style="color: #D9AE52; font-weight: 700; font-size: 14px">Otvoriť v Google Mapách →</a></div>')
 MAP_SCRIPT = """<script>
@@ -230,3 +235,5 @@ import optimize  # lighter images
 optimize.main()
 import en_build  # English version + SK/EN switch
 en_build.main()
+import cookies_consent  # consent banner; Google Maps only after consent
+cookies_consent.main()

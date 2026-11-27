@@ -266,4 +266,12 @@ T = {
 '3-izbový byt · 82,92 m² · 2 parkovacie miesta': '3-room flat · 82.92 m² · 2 parking spaces',
 'Byt Formula': 'Formula flat',
 '4.': '4th',
+# cookie consent
+'Mapu Google načítame až po vašom súhlase, pretože Google pri nej ukladá cookies.': 'We load the Google map only with your consent, because Google stores cookies with it.',
+'Zobraziť mapu': 'Show map',
+'Na stránkach s mapou (úvod, kontakt a ďalšie). Mapa sa načíta až po vašom súhlase.': 'On pages with the map (home, contact and others). The map loads only after your consent.',
+'Pri prvej návšteve sa vás opýtame na súhlas. Ak zvolíte „Len nevyhnutné“, mapa Google sa nenačíta a žiadne cookies sa neuložia. Svoje rozhodnutie môžete kedykoľvek zmeniť:': 'On your first visit we ask for your consent. If you choose “Necessary only”, the Google map is not loaded and no cookies are stored. You can change your decision at any time:',
+'Zmeniť nastavenia cookies': 'Change cookie settings',
+'Cookies môžete kedykoľvek vymazať alebo zablokovať aj v nastaveniach svojho prehliadača.': 'You can also delete or block cookies at any time in your browser settings.',
+'Mapa – LUMERA Real Estate, Legionárska 6419, Trenčín': 'Map – LUMERA Real Estate, Legionárska 6419, Trenčín',
 }
