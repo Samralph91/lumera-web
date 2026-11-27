@@ -13,6 +13,67 @@ BADGE_STYLE = {
 }
 
 LISTINGS = {
+    'formula': {
+        'marker': 'BYT FORMULA',
+        'folder': 'byt-formula',
+        'aspect': '3 / 2',
+        'tag': 'Prémiová ponuka',
+        'tag_bg': '#D9AE52',
+        'tag_fg': '#001939',
+        'title': 'Nový prémiový 3-izbový byt, zariadený, 2 parkovacie miesta',
+        'place': 'Trenčín, Soblahovská – projekt Formula',
+        'price': '389 900 €',
+        'per_m2': '4 702 € / m²',
+        'facts': [
+            ('Výmera', '82,92 m²'), ('Počet izieb', '3'), ('Balkón', '7,6 m²'), ('Pivnica', '1,97 m², priamo na poschodí'),
+            ('Poschodie', '4.'), ('Parkovanie', '2 parkovacie miesta'), ('Stav', 'novostavba, doteraz neobývaný'),
+            ('Rok výstavby', '2025'), ('Energetická náročnosť', 'nízkoenergetický byt'),
+            ('Kúrenie', 'podlahové, termostat v každej izbe'), ('Ohrev vody', 'vlastný elektrický kotol'),
+            ('Klimatizácia', 'v každej izbe'), ('Zariadenie', 'kompletne zariadený vrátane spotrebičov'),
+        ],
+        'desc': [
+            'Toto nie je bežný byt. Je to bývanie, pri ktorom sa nešetrilo na ničom. LUMERA Real Estate exkluzívne ponúka na predaj '
+            'úplne nový, doteraz neobývaný 3-izbový byt s balkónom na 4. poschodí v rezidenčnom projekte Formula na Soblahovskej ulici '
+            'v Trenčíne. Byt navrhla architektka do posledného detailu – každý materiál, každé svetlo aj každý centimeter úložného '
+            'priestoru tu má svoj zmysel. Budete jeho prvými obyvateľmi.',
+            'Byt má 82,92 m², balkón 7,6 m² a pivnicu 1,97 m² priamo na poschodí. K bytu patria 2 parkovacie miesta. '
+            'Prémiové materiály spoznáte na prvý dotyk: masívne dubové podlahy, bezfalcové magnetické dvere bez viditeľných pántov '
+            's tichým chodom, nábytok na mieru s vnútorným osvetlením a množstvom úložného priestoru a nastaviteľné náladové '
+            'osvetlenie v každej izbe.',
+            'Komfort, ktorý sa stane samozrejmosťou: podlahové vykurovanie s termostatom v každej izbe, vlastný elektrický kotol na ohrev vody, '
+            'klimatizácia v každej izbe a vonkajšie žalúzie na oknách. V kuchyni sú vstavané spotrebiče – rúra, varná doska aj vstavaný '
+            'kávovar –, k dispozícii je práčka aj sušička.',
+            'Byt sa predáva kompletne zariadený tak, ako ho vidíte na fotografiách, vrátane spotrebičov, klimatizácie aj žalúzií. '
+            'Prinesiete si len osobné veci a môžete sa nasťahovať. V blízkosti sú obchody, služby, škola, škôlka aj zastávky MHD. '
+            'Obhliadky sú možné po dohode, radi vám pomôžeme aj s financovaním.',
+        ],
+        'note': '',
+        'inzerat': 'https://www.nehnutelnosti.sk/detail/Jutf72sG1aw/lumera-novy-premiovy-3i-byt-83-m2-zariadeny-2-parking-formula-trencin',
+        'photos': [
+            ('01.jpg', REAL, 'img/byt-formula/01.jpg'),
+            ('02.jpg', REAL, 'img/byt-formula/02.jpg'),
+            ('03.jpg', REAL, 'img/byt-formula/03.jpg'),
+            ('04.jpg', REAL, 'img/byt-formula/04.jpg'),
+            ('05.jpg', REAL, 'img/byt-formula/05.jpg'),
+            ('06.jpg', REAL, 'img/byt-formula/06.jpg'),
+            ('07.jpg', REAL, 'img/byt-formula/07.jpg'),
+            ('08.jpg', REAL, 'img/byt-formula/08.jpg'),
+            ('09.jpg', REAL, 'img/byt-formula/09.jpg'),
+            ('10.jpg', REAL, 'img/byt-formula/10.jpg'),
+            ('11.jpg', REAL, 'img/byt-formula/11.jpg'),
+            ('12.jpg', REAL, 'img/byt-formula/12.jpg'),
+            ('13.jpg', REAL, 'img/byt-formula/13.jpg'),
+            ('14.jpg', REAL, 'img/byt-formula/14.jpg'),
+            ('15.jpg', REAL, 'img/byt-formula/15.jpg'),
+            ('16.jpg', REAL, 'img/byt-formula/16.jpg'),
+            ('17.jpg', REAL, 'img/byt-formula/17.jpg'),
+            ('18.jpg', REAL, 'img/byt-formula/18.jpg'),
+            ('19.jpg', REAL, 'img/byt-formula/19.jpg'),
+            ('20.jpg', REAL, 'img/byt-formula/20.jpg'),
+            ('21.jpg', REAL, 'img/byt-formula/21.jpg'),
+            ('22.jpg', PLAN, 'img/byt-formula/22.jpg'),
+        ],
+    },
     'byt28': {
         'marker': 'BYT 28. OKTÓBRA',
         'folder': 'byt-28-oktobra',
@@ -498,7 +559,7 @@ def _state(key, L):
     if is_sold(key):
         return dict(tag='PREDANÉ', tag_bg='#D9AE52', tag_fg='#001939', price='Predané',
                     per_m2='Podobnú nehnuteľnosť vám radi nájdeme.', cta='Chcem podobnú nehnuteľnosť', extra_links='')
-    return dict(tag=L['tag'], tag_bg='#001939', tag_fg='#F7F5F0', price=L['price'], per_m2=L['per_m2'], cta='Dohodnúť obhliadku',
+    return dict(tag=L['tag'], tag_bg=L.get('tag_bg', '#001939'), tag_fg=L.get('tag_fg', '#F7F5F0'), price=L['price'], per_m2=L['per_m2'], cta='Dohodnúť obhliadku',
                 extra_links='<a href="#hypoteka" style="text-align: center; font-weight: 700; font-size: 15px; padding: 6px">Vypočítať hypotéku →</a>\n'
                             '<a href="%s" style="text-align: center; font-size: 14px; color: #4A5566">Inzerát na nehnutelnosti.sk ↗</a>' % L['inzerat'])
 

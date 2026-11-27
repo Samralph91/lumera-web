@@ -2,7 +2,7 @@
 """Texts for the local pages (reality-<mesto>.html) and the blog. Slovak only."""
 
 # listing detail pages by area (static filenames)
-TN = ['dom-trencianske-mitice.html', 'byt-28-oktobra.html', 'pozemok-zamarovce.html', 'dom-trencianska-turna.html',
+TN = ['byt-formula-trencin.html', 'dom-trencianske-mitice.html', 'byt-28-oktobra.html', 'pozemok-zamarovce.html', 'dom-trencianska-turna.html',
       'byt-odbojarov-prenajom.html', 'pozemok-svinna.html', 'byt-trencianske-teplice.html']
 
 AREAS = [

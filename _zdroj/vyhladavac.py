@@ -6,6 +6,7 @@ import json, re
 
 # href (canvas artboard) -> filter facts
 FACTS = {
+    'Formula.dc.html':    dict(deal='kupa', type='byt', okres='Trenčín', price=389900, area=83, rooms=3, nov=True, park=True, order=0, kom=False),
     'Byt28.dc.html':      dict(deal='kupa', type='byt', okres='Trenčín', price=139900, area=67, rooms=3, nov=False, park=False, order=1, kom=False),
     'Zamarovce.dc.html':  dict(deal='kupa', type='pozemok', okres='Trenčín', price=143400, area=770, rooms=0, nov=False, park=False, order=2, kom=False),
     'Trebichava.dc.html': dict(deal='kupa', type='dom', okres='Bánovce nad Bebravou', price=12400, area=50, rooms=0, nov=False, park=False, order=3, kom=False),
@@ -34,12 +35,13 @@ PILL_OFF = ('min-height: 44px; padding: 0 18px; border-radius: 4px; border: 1px 
             'color: #001939; font-size: 15px; font-weight: 700; font-family: inherit; cursor: pointer')
 CHECK = 'display: flex; gap: 10px; align-items: center; font-size: 15px; font-weight: 600; color: #001939; cursor: pointer; min-height: 44px'
 
-DC_FIELDS = ('href', 'title', 'img', 'imgnote', 'tag', 'place', 'price', 'kind', 'areaT', 'roomsT', 'sub')
+DC_FIELDS = ('href', 'title', 'img', 'imgnote', 'tag', 'place', 'price', 'kind', 'areaT', 'roomsT', 'sub', 'tagstyle')
+PREMIUM_TAG = {'Formula.dc.html': 'background: #D9AE52; color: #001939'}
 
 CARD = '''<article %(attrs)s style="background: #FFFFFF; border: 1px solid #E4DFD3; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column">
 <a href="%(href)s" aria-label="%(title)s" style="position: relative; height: 220px; background: #DCD6C8 url('%(img)s') center / cover no-repeat; display: block; text-decoration: none">
 <span class="card-note" style="position: absolute; bottom: 12px; right: 14px; background: rgba(0,17,42,0.82); color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 5px 9px; border-radius: 3px">%(imgnote)s</span>
-<span style="position: absolute; top: 14px; left: 14px; background: #001939; color: #F7F5F0; font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 3px">%(tag)s</span>
+<span style="position: absolute; top: 14px; left: 14px; %(tagstyle)s; font-size: 12px; font-weight: 800; padding: 6px 10px; border-radius: 3px">%(tag)s</span>
 </a>
 <div style="padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1">
 <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: #8A6A2B">%(kind)s</span>
@@ -62,7 +64,7 @@ CARD = '''<article %(attrs)s style="background: #FFFFFF; border: 1px solid #E4DF
 HYPO_RATE, HYPO_YEARS, HYPO_LTV = 3.5, 30, 0.8
 HYPO_NOTE = ('* Orientačná mesačná splátka pri financovaní 80 % ceny, splatnosti 30 rokov a úroku 3,5 % p. a. '
              'Presnú ponuku z bánk vám pripravíme bezplatne.')
-AREA_TXT = {'Vlckovce.dc.html': '77,64 m²'}
+AREA_TXT = {'Vlckovce.dc.html': '77,64 m²', 'Formula.dc.html': '82,92 m²'}
 ROOMS_TXT = {'Trebichava.dc.html': 'pozemok 327 m²'}
 
 
@@ -78,6 +80,7 @@ def hypo_monthly(price):
 
 def _enrich(d):
     t, r = d['type'], d['rooms']
+    d['tagstyle'] = PREMIUM_TAG.get(d['href'], 'background: #001939; color: #F7F5F0')
     d['kind'] = ('%d-izbový byt' % r if r else 'Byt') if t == 'byt' else 'Rodinný dom' if t == 'dom' else (
         'Priemyselný pozemok' if d['kom'] else 'Stavebný pozemok' if t == 'pozemok' else 'Nebytový priestor')
     if d['deal'] == 'prenajom':
@@ -326,7 +329,7 @@ HOME_SCRIPT = '''<script>
 
 FOOT = '<p style="margin: 0; font-size: 13px; color: #4A5566">' + HYPO_NOTE + ' <a href="#hypoteka">Vypočítať vlastnú splátku →</a></p>\n'
 DC_CARD = CARD % dict({k: '{{item.%s}}' % k for k in DC_FIELDS}, attrs='')
-TOP = ['Mitice.dc.html', 'Byt28.dc.html', 'Zamarovce.dc.html', 'Odbojarov.dc.html']
+TOP = ['Formula.dc.html', 'Mitice.dc.html', 'Byt28.dc.html', 'Zamarovce.dc.html']
 
 
 def top_dc():

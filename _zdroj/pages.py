@@ -27,6 +27,8 @@ PAGES = [
      ['PRÁVNE SLUŽBY', 'KONTAKT'], 2100),
     ('Kontakt.dc.html', 'kontakt.html', 'Kontakt – LUMERA Real Estate', 'kontakt',
      ['KONTAKT'], 1500),
+    ('Formula.dc.html', 'byt-formula-trencin.html', 'Nový prémiový 3-izbový byt, Formula Trenčín – LUMERA Real Estate', None,
+     ['BYT FORMULA', 'KONTAKT'], 3000),
     ('Byt28.dc.html', 'byt-28-oktobra.html', '3-izbový byt s 2 balkónmi, Trenčín 28. októbra – LUMERA Real Estate', None,
      ['BYT 28. OKTÓBRA', 'KONTAKT'], 2700),
     ('Zamarovce.dc.html', 'pozemok-zamarovce.html', 'Slnečný pozemok 770 m², Zamarovce – LUMERA Real Estate', None,
@@ -54,7 +56,7 @@ PAGES = [
 ]
 TITLES = {'Predat.dc.html': 'Chcem predať', 'Main.dc.html': 'Domov', 'ONas.dc.html': 'O nás', 'Ponuka.dc.html': 'Ponuka nehnuteľností',
           'Nacenenie.dc.html': 'Nacenenie', 'Vykup.dc.html': 'Výkup nehnuteľností', 'Hypoteky.dc.html': 'Hypotéky',
-          'PravneSluzby.dc.html': 'Právne služby', 'Kontakt.dc.html': 'Kontakt', 'Byt28.dc.html': 'Byt 28. októbra', 'Zamarovce.dc.html': 'Pozemok Zamarovce', 'Trebichava.dc.html': 'Dom Trebichava', 'Myjava.dc.html': 'Byt Myjava', 'Mitice.dc.html': 'Dom Trenčianske Mitice', 'Malacky.dc.html': 'Pozemok Malacky', 'Svinna.dc.html': 'Pozemok Svinná', 'Odbojarov.dc.html': 'Prenájom Odbojárov', 'Teplice.dc.html': 'Byt Trenčianske Teplice', 'Vlckovce.dc.html': 'Byt Vlčkovce', 'Nitra.dc.html': 'Pozemok Nitrianske Hrnčiarovce', 'Turna.dc.html': 'Dom Trenčianska Turná'}
+          'PravneSluzby.dc.html': 'Právne služby', 'Kontakt.dc.html': 'Kontakt', 'Formula.dc.html': 'Byt Formula', 'Byt28.dc.html': 'Byt 28. októbra', 'Zamarovce.dc.html': 'Pozemok Zamarovce', 'Trebichava.dc.html': 'Dom Trebichava', 'Myjava.dc.html': 'Byt Myjava', 'Mitice.dc.html': 'Dom Trenčianske Mitice', 'Malacky.dc.html': 'Pozemok Malacky', 'Svinna.dc.html': 'Pozemok Svinná', 'Odbojarov.dc.html': 'Prenájom Odbojárov', 'Teplice.dc.html': 'Byt Trenčianske Teplice', 'Vlckovce.dc.html': 'Byt Vlčkovce', 'Nitra.dc.html': 'Pozemok Nitrianske Hrnčiarovce', 'Turna.dc.html': 'Dom Trenčianska Turná'}
 
 # where each in-page anchor lives once the site is split into pages
 ANCHOR_PAGE = {'domov': 'Main.dc.html', 'sluzby': 'Main.dc.html', 'o-nas': 'ONas.dc.html', 'ponuka': 'Ponuka.dc.html',
